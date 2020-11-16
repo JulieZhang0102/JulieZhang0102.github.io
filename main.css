@@ -12,7 +12,7 @@ body {
     font-family: 'Nunito', sans-serif;
     font-size: 18px;
     color: #666666;
-    text-align: justify;
+    text-align: left;
   }
 
 .back_area {
@@ -83,7 +83,7 @@ body {
   font-family: 'Big Shoulders Stencil Text';
   letter-spacing: 1px;
   font-size: 35px;
-  text-align: left;
+  line-height: 60px;
 }
 
 .my_work {
@@ -311,7 +311,7 @@ body {
 
 .gallery_product img {
   width: 100%;
-  margin: 15px;
+  margin: 10px 0;
 }
 
 .more_about_me {
