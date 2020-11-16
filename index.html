@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jiashu Zhang Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script src="https://kit.fontawesome.com/188a1ecbd0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="shortcut icon" type="image/png" href="assets/icon-logo.png"/>
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href='https://fonts.googleapis.com/css?family=Big Shoulders Stencil Text' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barrio&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+</head>
+
+<script>
+  
+  window.onload = function() {
+    //parallax effect
+    var addons = document.getElementById('addons');
+    var parallax = new Parallax(addons, {
+      relativeInput: true,
+    });
+
+  }
+
+  $(document).ready(function(){
+
+    //tootip for social media icons
+    $('[data-toggle="tooltip"]').tooltip();
+
+    //Photo Gallery for More About Me Section
+    $(".filter-button").click(function(){
+    var value = $(this).attr('data-filter');
+    
+    if(value == "all") {
+        $('.filter').show('1000');}
+    else {
+        $(".filter").not('.'+value).hide('3000');
+        $('.filter').filter('.'+value).show('3000');}
+    });
+
+    if ($(".filter-button").removeClass("active")) {
+    $(this).removeClass("active");
+    }
+    $(this).addClass("active");
+  });
+
+  //skillset bars
+  $(window).on('scroll',function() {
+    var hT = $('.skills').offset().top,
+        hH = $('.skills').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){
+      $('.skill-per').each(function(){
+        var $this = $(this);
+        var per = $this.attr('per');
+        $this.css("width",per+'%');
+        $({animatedValue: 0}).animate({animatedValue: per},{
+          duration: 1500,
+          step: function(){
+            $this.attr('per', Math.floor(this.animatedValue) + '%');
+          },
+          complete: function(){
+            $this.attr('per', Math.floor(this.animatedValue) + '%');
+          }
+        });
+      });
+      $(window).off('scroll'); 
+    }
+  }); 
+
+
+  // When the user scrolls down 12px from the top of the document, resize the navbar's padding and the logo's font size
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 12 || document.documentElement.scrollTop > 12) {
+      document.getElementsByClassName("navbar")[0].style.padding = "5px 10px";
+    } else {
+      document.getElementsByClassName("navbar")[0].style.padding = "12px 10px";
+    }
+  }
+
+</script>
+
+<body>
+  <!--Navigation bar-->
+  <nav class="navbar navbar-expand-sm sticky-top bg-custom">
+    <div class="container">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="index.html">
+        <img src="assets/icon.png" alt="logo" style="width:50px;">
+        </a>
+        <a class="navbar-brand jiashuzhang" href="index.html" style="font-size: 24px; color: rgb(253, 95, 94);">JZ</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon d-flex align-items-center justify-content-center"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item ml-2">
+            <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item ml-2">
+            <a class="nav-link" href="#">Featured Projects</a>
+            </li>
+            <li class="nav-item ml-2">
+            <a class="nav-link" href="#">Business Analytics</a>
+            </li>
+            <li class="nav-item ml-2">
+            <a class="nav-link" href="#">Tech & Marketing</a>
+            </li>
+            <span class="nav-indicator"></span>
+        </ul>
+        </div>
+    </div>
+  </nav>
+
+  <!-- parallax effect banner -->
+  <header class="masthead">
+    <ul id="addons">
+      <li data-depth="0.5">
+        <img class = "addon" src="assets/addon1.png">
+      </li>
+      <li data-depth="-0.2">
+        <img class = "addon" src="assets/addon2.png">
+      </li>
+      <li data-depth="0.1">
+        <img class = "addon" src="assets/addon3.png">
+      </li>
+      <li data-depth="-0.1">
+        <img class = "addon" src="assets/addon4.png">
+      </li>
+      <li data-depth="0.02">
+        <img class = "addon" src="assets/addon5.png">
+      </li>
+      <div data-depth="-0.2" style="margin-left: 45vw; margin-top: 10vh;">
+        <h2 class="intro_text">Hi, this is</h2>
+        <h1 class="jiashuzhang">JIASHU</h1>
+        <h1 class="jiashuzhang">ZHANG</h1>
+        <h2 class="intro_text">Create the Best for Human Use</h2>
+      </div>
+    </ul>
+
+  </header>
+
+<!-- Page Content -->
+<section class="py-5">
+  <div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+      <!-- self photo -->
+      <div class="col-5">
+        <div class="row d-flex align-items-center justify-content-center">
+          <img src="assets/julie_photo1.png" width="100%">
+        </div>
+      </div>
+      <div class="col-6 offset-1">
+        <!-- self intro -->
+        <div class="row d-flex align-items-center">
+          <h5 style="color: #333;" class="mb-3"><b>Hi There, I'm Jiashu Zhang</b></h5>
+          <h4 class="pm mb-3"><b>A Software Product Management Aspirant</b></h4>
+          <p>I love to explore advanced technologies while engage with my clients and target end users. I am proud of myself being both analytical and creative. My passion is to build software products that serve people better, including you and me.</p>
+          <p><span style="color: #333;"><b>Email: </b></span>juliezhang0102@gmail.com</p>
+        </div>
+        <div class="row d-flex align-items-center">
+          <a type="button" href="#" class="btn btn-primary custom-btn mr-3">My Featured Projects</a>
+          <a class="smsetting far fa-file-alt mr-2" data-toggle="tooltip" data-placement="bottom" title="Resume"
+              href="#" target="_blank"></a>
+          <a class="smsetting fab fa-linkedin-in mr-2" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"
+              href="https://www.linkedin.com/in/juliezhang0102" target="_blank"></a>
+          <a class="smsetting fab fa-github" data-toggle="tooltip" data-placement="bottom" title="GitHub"
+              href="https://github.com/JulieZhang0102" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-5 back_area">
+  <div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+      <h1 class="my_work">My Work</h1>
+    </div>
+    <div class="row mt-3 d-flex align-items-center justify-content-center">
+      <div class="col-4 text-center">
+        <div class="img-wrapper">
+          <img class="inner-img" src="assets/work1.png" />
+          <a class="img-description smsetting fas fa-link" href="#"></a>
+        </div>
+        <div class="mt-4"><a class="work_title" href="#">Featured Projects</a></div>
+      </div>
+      <div class="col-4 text-center">
+        <div class="img-wrapper">
+          <img class="inner-img" src="assets/work2.png" />
+          <a class="img-description smsetting fas fa-link" href="#"></a>
+        </div>
+        <div class="mt-4"><a class="work_title" href="#">Business Analytics</a></div>
+      </div>
+      <div class="col-4 text-center">
+        <div class="img-wrapper">
+          <img class="inner-img" src="assets/work3.png" />
+          <a class="img-description smsetting fas fa-link" href="#"></a>
+        </div>
+        <div class="mt-4"><a class="work_title" href="#">Tech & Marketing</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="personality py-5">
+  <div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+      <h1 class="my_feature mb-5">My Feature</h1>
+    </div>
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-6 text-center">
+        <h3 class="feature_name_pink mt-4">Innovative</h3>
+        <h3 class="feature_name_green">Analytical</h3>
+        <h3 class="feature_name_pink">Tech-Savvy<h3>
+        <h3 class="feature_name_green">Human-Centered</h3>
+      </div>
+      <div class="col-6">
+        <!-- skillset bars -->
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-name">HTML</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="90"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Python</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="80"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Javascript</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="75"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Balsamiq</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="70"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">R</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="65"></div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-5 back_area">
+  <div class="container">
+    <div class="row mb-4 d-flex align-items-center justify-content-center">
+      <h1 class="my_work">More About Me</h1>
+    </div>
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-3">
+        <button class="btn btn-default filter-button" data-filter="all">All</button><br>
+        <button class="btn btn-default filter-button" data-filter="adventure">Adventure</button><br>
+        <button class="btn btn-default filter-button" data-filter="nature">Nature Photography</button><br>
+        <button class="btn btn-default filter-button" data-filter="art">Studio Art</button><br>
+        <button class="btn btn-default filter-button" data-filter="cat">Cat Lover</button>
+      </div>
+      <div class="col-9">
+        <div class="row more_about_me d-flex align-items-center justify-content-center">
+          <div class="gallery_product col-4 text-center filter adventure">
+              <img class="rounded" src="assets/more_about_me/travel1.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter adventure">
+            <img class="rounded" src="assets/more_about_me/travel2.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter adventure">
+            <img class="rounded" src="assets/more_about_me/travel3.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter adventure">
+            <img class="rounded" src="assets/more_about_me/travel4.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter adventure">
+            <img class="rounded" src="assets/more_about_me/travel5.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter adventure">
+            <img class="rounded" src="assets/more_about_me/travel6.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter adventure">
+            <img class="rounded" src="assets/more_about_me/travel7.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter adventure">
+            <img class="rounded" src="assets/more_about_me/travel8.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter adventure">
+            <img class="rounded" src="assets/more_about_me/travel9.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter adventure">
+            <img class="rounded" src="assets/more_about_me/travel10.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter adventure">
+            <img class="rounded" src="assets/more_about_me/travel11.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter adventure">
+            <img class="rounded" src="assets/more_about_me/travel12.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho1.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho2.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho3.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho4.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho5.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho6.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho7.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho8.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho9.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho10.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho11.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho12.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho13.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho14.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter nature">
+            <img class="rounded" src="assets/more_about_me/pho15.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter art">
+            <img class="rounded" src="assets/more_about_me/art1.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter art">
+            <img class="rounded" src="assets/more_about_me/art2.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter art">
+            <img class="rounded" src="assets/more_about_me/art3.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter art">
+            <img class="rounded" src="assets/more_about_me/art4.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter art">
+            <img class="rounded" src="assets/more_about_me/art5.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter art">
+            <img class="rounded" src="assets/more_about_me/art6.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter art">
+            <img class="rounded" src="assets/more_about_me/art7.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter art">
+            <img class="rounded" src="assets/more_about_me/art8.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter art">
+            <img class="rounded" src="assets/more_about_me/art9.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter art">
+            <img class="rounded" src="assets/more_about_me/art10.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter art">
+            <img class="rounded" src="assets/more_about_me/art11.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter art">
+            <img class="rounded" src="assets/more_about_me/art12.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter cat">
+            <img class="rounded" src="assets/more_about_me/cat1.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter cat">
+            <img class="rounded" src="assets/more_about_me/cat2.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter cat">
+            <img class="rounded" src="assets/more_about_me/cat3.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter cat">
+            <img class="rounded" src="assets/more_about_me/cat4.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter cat">
+            <img class="rounded" src="assets/more_about_me/cat5.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter cat">
+            <img class="rounded" src="assets/more_about_me/cat6.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter cat">
+            <img class="rounded" src="assets/more_about_me/cat7.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter cat">
+            <img class="rounded" src="assets/more_about_me/cat8.jpg">
+          </div>
+          <div class="gallery_product col-4 text-center filter cat">
+            <img class="rounded" src="assets/more_about_me/cat9.jpg">
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="py-3 bg-dark text-white-50">
+  <div class="container text-center">
+    <small>Copyright &copy; 2020 Jiashu Zhang All Right Reserved</small>
+  </div>
+</footer>
+
+</body>
+</html>
