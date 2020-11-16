@@ -7,6 +7,10 @@
     --pubulan: rgb(81, 196, 211)
   }
 
+  *{
+    outline: 1px solid red;
+   }
+
 body {
     background-color: var(--hanbaiyu);
     font-family: 'Nunito', sans-serif;
