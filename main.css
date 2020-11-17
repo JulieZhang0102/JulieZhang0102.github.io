@@ -124,7 +124,7 @@ body {
   }
 
 .masthead_mobile {
-  height: 90vh;
+  height: 70vh;
   min-height: 350px;
   background-image: url('assets/home_mobile.jpg');
   background-size: cover;
