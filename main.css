@@ -15,6 +15,64 @@ body {
     text-align: left;
   }
 
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: var(--hanbaiyu);
+}
+
+.se-pre-con .loader_image {
+  width: 100px;
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.se-pre-con img {
+  width: 100px;
+  transform-origin: bottom center;
+  animation: 3s rotate infinite;
+  opacity: 0;
+}
+
+.se-pre-con .loader_image p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@keyframes rotate{
+  0% {
+    transform: rotate(90deg);
+  }
+  10% {
+    opacity: 0;
+  }
+  35% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  65% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
 .back_area {
   background-color: rgb(251, 242, 227);
 }
