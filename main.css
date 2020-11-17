@@ -15,6 +15,10 @@ body {
     text-align: left;
   }
 
+section {
+  opacity: 0;
+}
+
 .no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
 .se-pre-con {
@@ -230,75 +234,21 @@ body {
   text-align: left;
 }
 
-.skills{
-  width: 100%;
-  max-width: 350px;
-  padding: 0 0px;
-}
-
-.skill-name{
-  font-size: 15px;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin: 13px 0;
-  color: #303030
-}
-
-.skill-bar{
-  height: 5px;
-  background: #e2e2e2;
-  border-radius: 8px;
-}
-
-.skill-per{
-  height: 5px;
-  background-color: var(--banner_green);
-  border-radius: 10px;
-  width: 0;
-  transition: 1.5s linear;
-  position: relative;
-}
-
-.skill-per::before{
-  content: attr(per);
-  position: absolute;
-  padding: 4px 6px;
-  background-color: #000;
-  color: #fff;
-  font-size: 12px;
-  border-radius: 4px;
-  top: -35px;
-  right: 0;
-  transform: translateX(50%);
-}
-
-.skill-per::after{
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #000;
-  top: -16px;
-  right: 0;
-  transform: translateX(50%) rotate(45deg);
-  border-radius: 2px;
-}
-
-.img-wrapper {  
+.work_img_wrapper {  
   overflow: hidden; 
 }
 
-.inner-img {
+.work_girl_img {
   transition: 0.3s;
   width: 80%;
 }
 
-.img-wrapper:hover .inner-img{
+.work_img_wrapper:hover .work_girl_img{
   transform: scale(1.1);
   opacity: 0.3;
 }
 
-.img-wrapper:hover .img-description {
+.work_img_wrapper:hover .img-description {
   visibility: visible;
   opacity: 1;
 }

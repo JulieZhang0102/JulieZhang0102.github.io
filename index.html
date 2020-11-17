@@ -42,6 +42,27 @@
 
   $(document).ready(function(){
 
+    //fade in elements when scrolling down
+    $('header').fadeIn('slow');
+
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+    /* Check the location of each desired element */
+    $('section').each( function(i){
+        
+        var middle_of_object = $(this).position().top + $(this).outerHeight()/3;
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        
+        /* If the object is completely visible in the window, fade it in*/
+        if( bottom_of_window > middle_of_object ){
+            
+            $(this).animate({'opacity':'1'},1500);
+       
+        }  
+    });
+    });
+
     //tootip for social media icons
     $('[data-toggle="tooltip"]').tooltip();
 
@@ -61,32 +82,6 @@
     }
     $(this).addClass("active");
   });
-
-  //skillset bars
-  $(window).on('scroll',function() {
-    var hT = $('.skills').offset().top,
-        hH = $('.skills').outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){
-      $('.skill-per').each(function(){
-        var $this = $(this);
-        var per = $this.attr('per');
-        $this.css("width",per+'%');
-        $({animatedValue: 0}).animate({animatedValue: per},{
-          duration: 1500,
-          step: function(){
-            $this.attr('per', Math.floor(this.animatedValue) + '%');
-          },
-          complete: function(){
-            $this.attr('per', Math.floor(this.animatedValue) + '%');
-          }
-        });
-      });
-      $(window).off('scroll'); 
-    }
-  }); 
-
 
   // When the user scrolls down 12px from the top of the document, resize the navbar's padding and the logo's font size
   window.onscroll = function() {scrollFunction()};
@@ -198,7 +193,7 @@
             <h5 style="color: #333;"><b>Hi There, I'm Jiashu Zhang</b></h5>
             <h4 class="pm"><b>A Software Product Management Aspirant</b></h4>
             <p>I love to explore advanced technologies while engage with my clients and target end users. I am proud of myself being both analytical and creative. My passion is to build software products that serve people better, including you and me.</p>
-            <p><span style="color: #333;"><b>Email: </b></span>juliezhang0102@gmail.com</p>
+            <p><span style="color: #333;"><b>Email: </b></span><a href="mailto:juliezhang0102@gmail.com" style="text-decoration: none;">juliezhang0102@gmail.com</a></p>
           </div>
         </div>
         <div class="row d-flex align-items-center justify-content-center">
@@ -207,7 +202,7 @@
             <!-- Tablet up view -->
             <div class="d-none d-sm-inline">
               <a class="smsetting far fa-file-alt mr-2" data-toggle="tooltip" data-placement="bottom" title="Resume"
-                  href="#" target="_blank"></a>
+                  href="assets/Zhang-Resume.pdf" download target="_blank"></a>
               <a class="smsetting fab fa-linkedin-in mr-2" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"
                   href="https://www.linkedin.com/in/juliezhang0102" target="_blank"></a>
               <a class="smsetting fab fa-github" data-toggle="tooltip" data-placement="bottom" title="GitHub"
@@ -216,7 +211,7 @@
             <!-- Mobile view -->
             <div class="mt-3 d-block d-sm-none">
               <a class="smsetting far fa-file-alt mr-2" data-toggle="tooltip" data-placement="bottom" title="Resume"
-              href="#" target="_blank"></a>
+              href="/assets/Zhang-Resume.pdf" download target="_blank"></a>
               <a class="smsetting fab fa-linkedin-in mr-2" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"
               href="https://www.linkedin.com/in/juliezhang0102" target="_blank"></a>
               <a class="smsetting fab fa-github" data-toggle="tooltip" data-placement="bottom" title="GitHub"
@@ -235,22 +230,22 @@
     </div>
     <div class="row mt-3 d-flex align-items-center justify-content-center">
       <div class="col-md-4 text-center">
-        <div class="img-wrapper">
-          <img class="inner-img" src="assets/work1.png" />
+        <div class="work_img_wrapper">
+          <img class="work_girl_img" src="assets/work1.png" />
           <a class="img-description smsetting fas fa-link" href="#"></a>
         </div>
         <div class="mt-4"><a class="work_title" href="#">Featured Projects</a></div>
       </div>
       <div class="col-md-4 text-center">
-        <div class="img-wrapper">
-          <img class="inner-img" src="assets/work2.png" />
+        <div class="work_img_wrapper">
+          <img class="work_girl_img" src="assets/work2.png" />
           <a class="img-description smsetting fas fa-link" href="#"></a>
         </div>
         <div class="mt-4"><a class="work_title" href="#">Business Analytics</a></div>
       </div>
       <div class="col-md-4 text-center">
-        <div class="img-wrapper">
-          <img class="inner-img" src="assets/work3.png" />
+        <div class="work_img_wrapper">
+          <img class="work_girl_img" src="assets/work3.png" />
           <a class="img-description smsetting fas fa-link" href="#"></a>
         </div>
         <div class="mt-4"><a class="work_title" href="#">Tech & Marketing</a></div>
@@ -264,47 +259,18 @@
       <div class="col-md-12 text-center"><h1 class="my_feature mb-5">My Feature</h1></div>
     </div>
     <div class="row d-flex align-items-center justify-content-center">
-      <div class="col-md-6 text-center">
+
+      <div class="col-md-6">
+        <!-- word cloud -->
+        <img width="100%" src="assets/word_cloud.png">
+      </div>
+      <div class="col-md-5 text-center">
         <h3 class="feature_name_pink mt-4">Innovative</h3>
         <h3 class="feature_name_green">Analytical</h3>
         <h3 class="feature_name_pink">Tech-Savvy<h3>
         <h3 class="feature_name_green">Human-Centered</h3>
       </div>
-      <div class="col-md-5 col-md-offset-1">
-        <!-- skillset bars -->
-        <div class="skills">
-          <div class="skill">
-            <div class="skill-name">HTML</div>
-            <div class="skill-bar">
-              <div class="skill-per" per="90"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill-name">Python</div>
-            <div class="skill-bar">
-              <div class="skill-per" per="80"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill-name">Javascript</div>
-            <div class="skill-bar">
-              <div class="skill-per" per="75"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill-name">Balsamiq</div>
-            <div class="skill-bar">
-              <div class="skill-per" per="70"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill-name">R</div>
-            <div class="skill-bar">
-              <div class="skill-per" per="65"></div>
-            </div>
-          </div>
-        </div> 
-      </div>
+      <div class="col-md-1"></div>
     </div>
   </div>
 </section>
