@@ -147,7 +147,7 @@
   </nav>
 
   <!-- parallax effect banner -->
-  <header class="masthead">
+  <header class="masthead d-none d-md-block">
     <ul id="addons">
       <li data-depth="0.5">
         <img class = "addon" src="assets/addon1.png">
@@ -171,8 +171,17 @@
         <h2 class="intro_text">Create the Best for Human Use</h2>
       </div>
     </ul>
-
   </header>
+
+    <!-- no parallax effect for tablet or mobile -->
+    <header class="masthead_mobile d-md-none">
+        <div style="margin-left: 45vw; margin-top: 10vh;">
+          <h2 class="intro_text">Hi, this is</h2>
+          <h1 class="jiashuzhang">JIASHU</h1>
+          <h1 class="jiashuzhang">ZHANG</h1>
+          <h2 class="intro_text">Create the Best for Human Use</h2>
+        </div>
+    </header>
 
 <!-- Page Content -->
 <section class="py-5">

@@ -123,6 +123,16 @@ body {
     overflow: hidden;
   }
 
+.masthead_mobile {
+  height: 90vh;
+  min-height: 350px;
+  background-image: url('assets/home_mobile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
 .addon {
   height: 90vh;
   min-height: 500px;
