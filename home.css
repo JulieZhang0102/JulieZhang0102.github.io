@@ -1,0 +1,188 @@
+@import url("main.css");
+
+.masthead {
+    height: 90vh;
+    min-height: 500px;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
+.masthead_mobile {
+  height: 70vh;
+  min-height: 350px;
+  background-image: url('assets/home_mobile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.addon {
+  height: 90vh;
+  min-height: 500px;
+  width: 101%;
+  overflow: hidden;
+  }
+
+.pm {
+  color:var(--banner_pink); 
+  font-family: 'Big Shoulders Stencil Text';
+  letter-spacing: 1px;
+  font-size: 35px;
+  line-height: 60px;
+}
+
+.btn-primary.custom-btn {
+    font-family: 'Nunito';
+    font-weight: 800;
+    border-width: 2px;
+    background-color: var(--banner_pink); 
+    border-color: var(--banner_pink); 
+   }
+  
+  .btn-primary.custom-btn:hover {
+    opacity: 0.8;
+   }
+  
+  .smsetting {
+    height: 35px;
+    padding-top: 8px;
+    margin-top: 2px;
+    width: 35px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+   }
+  
+  .smsetting:hover {
+    opacity: 0.8;
+   }
+  
+  .smsetting:link {
+    text-decoration: none;
+   }
+  
+  .fa-file-alt {
+    background-color: var(--banner_green);
+    color: white;
+   }
+  
+  .fa-github {
+    background-color: #333;
+    color: white;
+   }
+  
+  .fa-linkedin-in {
+    background-color: #2867B2;
+    color: white;
+    }
+  
+  .fa-link {
+    background-color: var(--banner_pink);
+    color: white;
+  }
+  
+  .intro_text {
+    font-family: 'Allerta Stencil';
+    font-size: calc(50% + 1vw + 1vh);
+    color: white;
+    text-align: left;
+  }
+  
+  .work_img_wrapper {  
+    overflow: hidden; 
+  }
+  
+  .work_girl_img {
+    transition: 0.3s;
+    width: 80%;
+  }
+  
+  .work_img_wrapper:hover .work_girl_img{
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+  
+  .work_img_wrapper:hover .img-description {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .img-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .work_title {
+    font-size: 25px;
+    color: #666666
+  }
+  
+  .work_title:hover {
+    text-decoration: none;
+    color: #333
+  }
+  
+  .personality {
+    min-height: 400px;
+    background-image: url('assets/home_banner.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .feature_name_green {
+    font-family: 'Barrio', cursive;
+    font-size: 40px;
+    color: var(--banner_green);
+  }
+  
+  .feature_name_pink {
+    font-family: 'Barrio', cursive;
+    font-size: 40px;
+    color: var(--banner_pink);
+  }
+  
+  .filter-button {
+      font-size: 18px;
+      border: 1px solid #db584e;
+      border-radius: 5px;
+      text-align: center;
+      color: #db584e;
+      margin-bottom: 30px;
+  
+  }
+  .filter-button:hover {
+      font-size: 18px;
+      border: 1px solid #db584e;
+      border-radius: 5px;
+      text-align: center;
+      color: #ffffff;
+      background-color: #db584e;
+  
+  }
+  .btn-default:active .filter-button:active {
+      background-color: #db584e;
+      color: white;
+  }
+  
+  .gallery_product img {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .more_about_me {
+    height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }

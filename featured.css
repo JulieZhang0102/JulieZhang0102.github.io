@@ -1,0 +1,39 @@
+@import url("main.css");
+/* *{
+    border:1px solid red;
+} */
+header {
+margin-top: 70px;
+}
+
+.top_girl {
+    width: 60%;
+}
+
+.swiper-container {
+    padding-bottom: 60px;
+  }
+
+.swiper-slide {
+    width: 800px;
+    height: 450px;
+    background-position: left center;
+    background-size: contain;
+}
+
+.swiper-slide .caption {
+    background-color: rgba(248, 244, 237, 0.8);
+    width: 100%;
+    position: absolute;
+    bottom: 0; 
+    padding: 5px 0;
+}
+
+.swiper-slide .caption a {
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.swiper-slide .caption a:hover {
+    opacity: 0.8;
+}

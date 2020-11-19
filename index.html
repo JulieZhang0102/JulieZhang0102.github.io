@@ -11,7 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <script src="https://kit.fontawesome.com/188a1ecbd0.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="home.css">
   <link rel="shortcut icon" type="image/x-icon" href="assets/icon.ico"/>
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,7 +19,6 @@
   <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Barrio&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
 </head>
 
 <script>
@@ -86,9 +85,17 @@
   function scrollFunction() {
     if (document.body.scrollTop > 12 || document.documentElement.scrollTop > 12) {
       document.getElementsByClassName("navbar")[0].style.padding = "5px 10px";
+      document.getElementById("back_to_top").style.display = "block";
     } else {
       document.getElementsByClassName("navbar")[0].style.padding = "12px 10px";
+      document.getElementById("back_to_top").style.display = "none";
     }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
   }
 
 </script>
@@ -124,13 +131,13 @@
             <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item ml-2">
-            <a class="nav-link" href="#">Featured Projects</a>
+            <a class="nav-link" href="featured.html">Featured Projects</a>
             </li>
             <li class="nav-item ml-2">
-            <a class="nav-link" href="#">Business Analytics</a>
+            <a class="nav-link" href="analytics.html">Business Analytics</a>
             </li>
             <li class="nav-item ml-2">
-            <a class="nav-link" href="#">Tech & Marketing</a>
+            <a class="nav-link" href="techmarket.html">Tech & Marketing</a>
             </li>
             <span class="nav-indicator"></span>
         </ul>
@@ -174,6 +181,9 @@
           <h2 class="intro_text">Create the Best for Human Use</h2>
         </div>
     </header>
+
+    <!-- back to top button -->
+    <button onclick="topFunction()" id="back_to_top" title="Go to top">Top</button>
 
 <!-- Page Content -->
 <section class="py-5">
