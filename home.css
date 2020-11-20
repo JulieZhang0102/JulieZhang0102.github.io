@@ -134,13 +134,6 @@
     color: #333
   }
   
-  .personality {
-    min-height: 400px;
-    background-image: url('assets/home_banner.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-  
   .feature_name_green {
     font-family: 'Barrio', cursive;
     font-size: 40px;

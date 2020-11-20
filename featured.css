@@ -3,7 +3,8 @@
     border:1px solid red;
 } */
 header {
-margin-top: 70px;
+padding-top: 70px;
+padding-bottom: 20px;
 }
 
 .top_girl {
@@ -12,13 +13,15 @@ margin-top: 70px;
 
 .swiper-container {
     padding-bottom: 60px;
+    margin:0 5%;
   }
 
 .swiper-slide {
     width: 800px;
     height: 450px;
-    background-position: left center;
-    background-size: contain;
+    background-position: right center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .swiper-slide .caption {
@@ -31,9 +34,63 @@ margin-top: 70px;
 
 .swiper-slide .caption a {
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 20px;
 }
 
 .swiper-slide .caption a:hover {
     opacity: 0.8;
+}
+
+.sub_title {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.quick_summary_body {
+    line-height: 35px;
+    margin-bottom: 0;
+}
+
+.highlights li{
+    line-height: 35px;
+    padding-left: 10px;
+}
+
+.tab-pane {
+    min-height: 51vh;
+}
+
+.nav-pills-custom .nav-link {
+    color: #aaa;
+    background: #fff;
+    position: relative;
+}
+
+.nav-pills-custom .nav-link.active {
+    color: var(--banner_green);
+    background: #fff;
+}
+
+/* Add indicator arrow for the active tab */
+@media (min-width: 576px) {
+    .nav-pills-custom .nav-link::before {
+        content: '';
+        display: block;
+        border-top: 8px solid transparent;
+        border-left: 10px solid #fff;
+        border-bottom: 8px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
+
+.nav-pills-custom .nav-link.active::before {
+    opacity: 1;
+}
+
+.reflection_text {
+    text-indent: 40px;
 }
