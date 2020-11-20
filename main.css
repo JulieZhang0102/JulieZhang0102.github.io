@@ -21,6 +21,7 @@ body {
 
 section {
   opacity: 0;
+  scroll-margin-top: 2em;
 }
 
 .no-js #loader { display: none;  }
