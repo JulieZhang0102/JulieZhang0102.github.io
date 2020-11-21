@@ -60,6 +60,7 @@
         centeredSlides: true,
         slidesPerView: 'auto',
         initialSlide: 1,
+        autoplay: { delay: 3000, disableOnInteraction: false,},
         coverflowEffect: {
             rotate: 50,
             stretch: 0,
@@ -78,14 +79,16 @@
     });
   });
 
-  // When the user scrolls down 12px from the top of the document, resize the navbar's padding and the logo's font size
-  // and display back to top button
+  // When the user scrolls down 1px from the top of the document, resize the navbar's padding and the logo's font size
+  // and when scrolls down 50px from the top, display back to top button
   window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
-    if (document.body.scrollTop > 12 || document.documentElement.scrollTop > 12) {
+    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
       document.getElementsByClassName("navbar")[0].style.padding = "5px 10px";
-      document.getElementById("back_to_top").style.display = "block";
+      if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("back_to_top").style.display = "block";
+      }
     } else {
       document.getElementsByClassName("navbar")[0].style.padding = "12px 10px";
       document.getElementById("back_to_top").style.display = "none";
@@ -93,10 +96,10 @@
   }
 
   // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
 
 </script>
 
@@ -156,17 +159,21 @@
             <!-- Swiper -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image:url('assets/projects/starBook.jpg')">
-                        <div class="caption"><a href="#starBook">starBook Web APP Development</a></div>
+                    <div class="swiper-slide">
+                      <img class="img-fluid" src="assets/projects/starBook.jpg">
+                      <div class="caption"><a href="#starBook">starBook Web APP Development</a></div>
                     </div>
-                    <div class="swiper-slide" style="background-image:url('assets/projects/Mindpiece.png')">
-                        <div class="caption"><a href="#">Mindpiece Mobile APP Design</a></div>
+                    <div class="swiper-slide">
+                      <img class="img-fluid" src="assets/projects/Mindpiece.png">
+                      <div class="caption"><a href="#">Mindpiece Mobile APP Design</a></div>
                     </div>
-                    <div class="swiper-slide" style="background-image:url('assets/projects/PAMS.jpg')">
-                        <div class="caption"><a href="#">Aerospace Business Consultation</a></div>
+                    <div class="swiper-slide">
+                      <img class="img-fluid" src="assets/projects/PAMS.jpg">
+                      <div class="caption"><a href="#">Mindpiece Mobile APP Design</a></div>
                     </div>
-                    <div class="swiper-slide" style="background-image:url('assets/projects/Wegmans.png')">
-                        <div class="caption"><a href="#">Wegmans Social Network Design</a></div>
+                    <div class="swiper-slide">
+                      <img class="img-fluid" src="assets/projects/Wegmans.png">
+                      <div class="caption"><a href="#">Mindpiece Mobile APP Design</a></div>
                     </div>
                 </div>
                 <!-- Add Pagination -->
@@ -191,40 +198,25 @@
       </div>
     </div>
 
-    <!-- quick summary -->
+    <!-- basic info -->
     <div class="row mt-5 d-flex align-items-center justify-content-center">
       <div class="col-md-5 text-center">
         <img width="100%" src="assets/projects/starBook_1.gif">
       </div>
-      <div class="col-md-7 mx-atuo">
-        <h2 class="mb-3 sub_title">Quick Summary</h2>
-        <p class="quick_summary_body"><b>Project Length:</b> Two month development + up to date maintenance<br>
-          <b>Link:</b> <a href="https://www.chinesestorytime.org/en/starbook/" target="_blank">starBook Program Link</a><br>
+      <div class="col-md-6 offset-1">
+        <h2 class="mb-3 sub_title">Basic Information</h2>
+        <p class="basic_info_body">
           <b>Role:</b> Product Manager and Web APP Developer<br>
-          <b>Client:</b> International Chinese Reading Association (ICRA)<br>
           <b>Industry:</b> Non-profit organization<br>
-          <b>Tech Tool:</b> Python Django<br></p>
-      </div> 
-    </div>
-
-    <!-- project highlights -->
-    <div class="row mt-5 d-flex align-items-center justify-content-center">
-      <div class="col-md-7 mx-atuo">
-        <h2 class="mb-3 sub_title">Project highlights</h2>
-        <p class="quick_summary_body">
-          <ul class="highlights">
-            <li>Led product development from idea generation and target audience analysis to user interface design and product implementation</li>
-            <li>Developed both user and administration interface for data collection and manipulation</li>
-            <li>Integrated Google Books API and batch data import feature to improve data input easiness and user experience</li>
-          </ul>
+          <b>Tech Tool:</b> Python Django<br>
+          <b>Project Length:</b> 2 month development & up to date maintenance<br>
+          <b>Client:</b> International Chinese Reading Association (ICRA)<br>
+          <b>Link:</b> <a href="https://www.chinesestorytime.org/en/starbook/" target="_blank">starBook Web APP Link</a><br>
         </p>
       </div> 
-      <div class="col-md-5 text-center">
-        <img width="100%" src="assets/projects/starBook_2.png">
-      </div>
     </div>
 
-    <!-- project processes -->
+    <!-- project story -->
     <div class="row mt-5 d-flex align-items-center justify-content-center">
       <div class="col-md-12 text-center">
         <h2 class="mb-4 sub_title">Project Story</h2>
@@ -263,10 +255,15 @@
           <div class="tab-content" id="v-pills-tabContent">
               <div class="tab-pane fade shadow rounded bg-white show active p-5" id="client-demands" role="tabpanel" aria-labelledby="client-demands-tab">
                 <h4 class="mb-3">Understanding Client’s Demands and Requirements</h4>
-                <p class="font-italic text-muted mb-3">During my first several meetings with the client, the meeting goal is to clarify the client’s demands and identify the client’s requirements.</p>
-                <p class="text-muted mb-2"><b>Main challenge:</b> The client did not have a clear vision for the project and was not familiar with Web APP development.</p>
-                <p class="text-muted mb-2"><b>Strategy:</b> Instead of confirming the project vision and goal immediately, I decided to have a few meetings with my client - had conversations with different stakeholders and helped them to envision the project as a whole by identifying their needs. The key points were to give them enough time to think and reflect and be flexible to make changes.</p>
-                <p class="text-muted mb-4"><b>Deliverable:</b> A project proposal detailing the project vision, project goal, implementation plan, potential risk, and communication plan.</p>
+                <p class="font-italic text-muted mb-3">Besides carefully listening to my client, I worked with my client to envision the product from random ideas to a coherent application program that has specific goals to serve the organization.</p>
+                <p class="text-muted mb-3"><b>Main Challenges:</b>
+                  <ul class="text-muted">
+                    <ol>1. The client did not have a clear vision for the project</ol>
+                    <ol>2. The client was not familiar with Web APP development.</ol>
+                  </ul>
+                </p>
+                <p class="text-muted mb-3"><b>Strategy:</b> I had conversations with different stakeholders involved in the starBook program - discussed their needs, sorted out their ideas, and transformed them into effective product goals. I also researched similar products or prototypes to visualize thoughts and clarify any confusion. The key points were to give them enough time to think and actively follow up with them to welcome new thoughts and possible improvements.</p>
+                <p class="text-muted mb-4"><b>Deliverable:</b> A project proposal detailing the project vision, project goal, implementation plan, potential risks, and communication plan.</p>
                 <img width="100%" src="assets/projects/starBook_proposal.png">
               </div>
               
@@ -274,15 +271,15 @@
                   <h4 class="mb-3">Target Users’ Analysis and Web APP Flowchart Design</h4>
                   <p class="font-italic text-muted mb-3">The Web APP is designed to serve two types of users, program participating parents and program managers. Therefore, there are two basic personas created below.</p>
                   <div class="row d-flex align-items-center justify-content-center">
-                    <div class="col-md-2 text-center"><img class="mb-2" width="80%" src="assets/projects/starBook_personas_1.png"></div>
+                    <div class="col-md-2 text-center"><img class="mb-3" width="80%" src="assets/projects/starBook_personas_1.png"></div>
                     <div class="col-md-10 mx-atuo">
-                      <p class="text-muted mb-2" style="font-size: 16px;"><b>Lucy</b>, 35 years old, a mother of two kids whose ages are 3 and 5. She wants to borrow or buy some Chinese children’s books for her kids but does not know which libraries to go to or what books are recommended. She participates in the starBook program and wants to get some related book information on the program Web APP. At the same time, she could also recommend any book to the program and comment on existing books.</p>
+                      <p class="text-muted mb-3" style="font-size: 16px;"><b>Lucy</b>, 35 years old, a mother of two kids whose ages are 3 and 5. She wants to borrow or buy some Chinese children’s books for her kids but does not know which libraries to go to or what books are recommended. She participates in the starBook program and wants to get some related book information on the program Web APP. At the same time, she could also recommend any book to the program and comment on existing books.</p>
                     </div>
                   </div>
                   <div class="row d-flex align-items-center justify-content-center">
-                    <div class="col-md-2 text-center"><img class="mb-2" width="80%" src="assets/projects/starBook_personas_2.png"></div>
+                    <div class="col-md-2 text-center"><img class="mb-3" width="80%" src="assets/projects/starBook_personas_2.png"></div>
                     <div class="col-md-10 mx-atuo">
-                      <p class="text-muted mb-2" style="font-size: 16px;"><b>Tim</b>, 28 years old, an ICRA volunteer for the starBook program. He needs to use the program Web APP to manage the book collection list. He has his administration account and can upload, download, modify, and delete any book record in the administration interface.</p>
+                      <p class="text-muted mb-3" style="font-size: 16px;"><b>Tim</b>, 28 years old, an ICRA volunteer for the starBook program. He needs to use the program Web APP to manage the book collection list. He has his administration account and can upload, download, modify, and delete any book record in the administration interface.</p>
                     </div>
                   </div>
                   <p class="text-muted"><b>Deliverable:</b> A flowchart to map the book recommendation or comment process.</p>
@@ -292,30 +289,35 @@
               <div class="tab-pane fade shadow rounded bg-white p-5" id="wireframe" role="tabpanel" aria-labelledby="wireframe-tab">
                 <h4 class="mb-3">Web APP Wireframe Design</h4>
                 <p class="font-italic text-muted mb-3">To better visualize the Web APP and discuss the design with my client, I sketched main page wireframes and revised them during meetings.</p>
-                <p class="text-muted mb-2"><b>Strategy:</b> Because the client might want to add and drop elements anytime, I sketched wireframes so that both my client and I could make instant changes during our conversations instead of wasting time waiting for me to make changes on fancy mockup tools.</p>
+                <p class="text-muted mb-3"><b>Strategy:</b> Because the client might want to add and drop elements anytime, I sketched wireframes so that both my client and I could make instant changes during our conversations instead of wasting time waiting for me to make changes on fancy mockup tools.</p>
                 <p class="text-muted"><b>Deliverable:</b> Final sketch wireframes illustrating structures of the program home page and book collection page.</p>
-                <img width="90%" src="assets/projects/starBook_wireframe.jpg">
+                <div class="text-center">
+                  <img width="45%" src="assets/projects/starBook_wireframe_1.jpg">
+                  <img width="45%" src="assets/projects/starBook_wireframe_2.jpg">
+                </div>
               </div>
               
               <div class="tab-pane fade shadow rounded bg-white p-5" id="development" role="tabpanel" aria-labelledby="development-tab">
                   <h4 class="mb-3">Web APP Development and Weekly Iteration</h4>
-                  <p class="font-italic text-muted mb-3">I scheduled weekly meetings with my client as well as any additional meetings as necessary. Conversations mainly focused on development updates from me, feedback from my client, and goals for the next week.</p>
-                  <p class="text-muted mb-2"><b>Strategy:</b> Communication is key. Weekly plans and iteration are the best methods to guarantee there is no lag between my client and me. Besides the development updates, I also frequently revisited the project goals with my client to fulfill the product’s business value.</p>
+                  <p class="font-italic text-muted mb-3">I applied the Agile methodology to better interact with my client and improve the project flexibility to changes.</p>
+                  <p class="text-muted mb-3"><b>Strategy:</b> Through weekly iteration meetings, development updates from me, feedback from my client, and goals for the next phase could all be communicated immediately and implemented in a weekly cycle. I also frequently revisited the product goals with my client to make sure the project is on the right track fulfilling the product’s business value.</p>
+                  <p class="text-muted mb-3"><b>Significant Improvement:</b> Incorporated batch data import feature to simplify the data entry process for program managers.</p>
                   <img width="90%" src="assets/projects/starBook_django.png">
               </div>
 
               <div class="tab-pane fade shadow rounded bg-white p-5" id="launch" role="tabpanel" aria-labelledby="launch-tab">
                 <h4 class="mb-3">Web APP Testing and First Launch</h4>
-                <p class="font-italic text-muted mb-3">We implemented both internal testing and external feedback collection.</p>
-                <p class="text-muted mb-2"><b>Internal Testing:</b> The Web APP was firstly tested by program managers to test functionalities and fix bugs.</p>
-                <p class="text-muted mb-3"><b>External Feedback Collection:</b> The Web APP was then launched to collect user experience feedback from program participating parents (public users).</p>
+                <p class="font-italic text-muted mb-3">Both internal testing and external feedback collection were implemented.</p>
+                <p class="text-muted mb-3"><b>Internal Testing:</b> The Web APP was firstly tested by program managers to test functionalities and fix bugs.</p>
+                <p class="text-muted mb-3"><b>External Feedback Collection:</b> The Web APP was then launched to collect user experience feedback from participating parents (public users).</p>
+                <p class="text-muted mb-3"><b>Significant Improvement:</b> Integrated Google Books API to search and auto-fill book information, thus leaving less work for parents and encouraging them to recommend books through Web APP.</p>
                 <img width="100%" src="assets/projects/starBook_2.gif">
             </div>
 
             <div class="tab-pane fade shadow rounded bg-white p-5" id="expansion" role="tabpanel" aria-labelledby="expansion-tab">
               <h4 class="mb-3">Web APP Maintenance and Expansion</h4>
-              <p class="font-italic text-muted mb-3">We continue collecting feedback and make improvements/maintenance every two months.</p>
-              <p class="text-muted mb-3">As the client desired, I have further expanded the Web APP from the program site only to the website for the whole organization. The development is in progress and has partly launched based on clients’ demands.</p>
+              <p class="font-italic text-muted mb-3">Maintenance is scheduled every two months as more feedback is collected.</p>
+              <p class="text-muted mb-3">Meanwhile, thanks to the positive reaction from users, my client decided to expand the Web APP to be its organization website. I will be responsible for designing more features to continue providing valuable information to the target audience.</p>
               <img width="100%" src="assets/projects/starBook_website.gif">
             </div>
 
@@ -329,10 +331,10 @@
     </div>
     <div class="row d-flex align-items-center justify-content-center">
       <div class="col-md-9 reflection_text">
-        <b>While at school all management methods and software development processes are taught step by step, in reality, my client came to me with almost nothing in mind. It is my responsibility to help my client envision the product through countless discussions, clarifications, and revisions. I need to keep asking questions and communicating with different stakeholders. It is critical for me, as a product manager, to make sure my client and I both understand and agree on the product’s business value and goals.</b>
+        While most development processes are taught step by step, in reality, my client came to me with almost nothing in mind. It is critical for me, as a product manager, to help my client envision the product through conversations and prototyping. Clients could come without preparation, but they will leave the meeting with clear plans and product visions.
       </div>
       <div class="col-md-3 text-center">
-        <img width="100%" src="assets/projects/reflection.jpg">
+        <img width="100%" src="assets/projects/reflection.png">
       </div>
     </div>
 

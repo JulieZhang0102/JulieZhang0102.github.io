@@ -79,13 +79,16 @@
     $(this).addClass("active");
   });
 
-  // When the user scrolls down 12px from the top of the document, resize the navbar's padding and the logo's font size
+  // When the user scrolls down 1px from the top of the document, resize the navbar's padding and the logo's font size
+  // and when scrolls down 50px from the top, display back to top button
   window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
-    if (document.body.scrollTop > 12 || document.documentElement.scrollTop > 12) {
+    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
       document.getElementsByClassName("navbar")[0].style.padding = "5px 10px";
-      document.getElementById("back_to_top").style.display = "block";
+      if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("back_to_top").style.display = "block";
+      }
     } else {
       document.getElementsByClassName("navbar")[0].style.padding = "12px 10px";
       document.getElementById("back_to_top").style.display = "none";
