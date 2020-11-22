@@ -98,10 +98,7 @@ ul ol {
     color: var(--banner_pink);
 }
 
-.mindpeace_service {
-    width: 25%;
-    display: table-cell;
-    text-align: center;
+.mindpeace_service p {
     font-size: 15px;
 }
 
