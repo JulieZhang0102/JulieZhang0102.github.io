@@ -38,23 +38,23 @@
     /* Every time the window is scrolled ... */
     $(window).scroll( function(){
     
-        /* Check the location of each desired element */
-        $('section').each( function(i){
-            
-            var middle_of_object = $(this).position().top + $(this).outerHeight()/10;
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            /* If the object is completely visible in the window, fade it in*/
-            if( bottom_of_window > middle_of_object ){
-                
-                $(this).animate({'opacity':'1'},1500);
-        
-            }  
-        });
+      /* Check the location of each desired element */
+      $('section').slice(1).each( function(i){
+      
+      var desired_object = $(this).position().top + 10;
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      
+      /* If the object is visible in the window, fade it in*/
+      if( bottom_of_window > desired_object ){
+          
+          $(this).animate({'opacity':'1'},1500);
+      
+      }  
+    });
     });
 
-    // Initialize Swiper
-    var swiper = new Swiper('.swiper-container', {
+    // Initialize Swiper for project list display
+    var swiper_project_list = new Swiper('#project_list_swiper', {
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
@@ -77,7 +77,41 @@
             prevEl: '.swiper-button-prev',
         },
     });
+
+    // Initialize Swiper for Mindpeace tester list display
+    var swiper_test_list = new Swiper('#Mindpeace_tests', {
+        autoplay: { delay: 3000,},
+        centeredSlides: true,
+        observer: true,
+        observeParents: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+        },
+      });
+
+      // Initialize Swiper for Mindpeace development strategy display
+      var swiper_test_list = new Swiper('#Mindpeace_development', {
+          autoplay: { delay: 3000,},
+          centeredSlides: true,
+          observer: true,
+          observeParents: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+          },
+        });
+
   });
+
 
   // When the user scrolls down 1px from the top of the document, resize the navbar's padding and the logo's font size
   // and when scrolls down 50px from the top, display back to top button
@@ -86,7 +120,7 @@
   function scrollFunction() {
     if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
       document.getElementsByClassName("navbar")[0].style.padding = "5px 10px";
-      if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         document.getElementById("back_to_top").style.display = "block";
       }
     } else {
@@ -157,23 +191,23 @@
         </div>
         <div class="col-md-8 text-center">
             <!-- Swiper -->
-            <div class="swiper-container">
+            <div class="swiper-container" id="project_list_swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <img class="img-fluid" src="assets/projects/starBook.jpg">
-                      <div class="caption"><a href="#starBook">starBook Web APP Development</a></div>
+                      <div class="caption"><a href="#starBook"><b>starBook Web APP Development</b></a></div>
                     </div>
                     <div class="swiper-slide">
-                      <img class="img-fluid" src="assets/projects/Mindpiece.png">
-                      <div class="caption"><a href="#">Mindpiece Mobile APP Design</a></div>
+                      <img class="img-fluid" src="assets/projects/Mindpeace.png">
+                      <div class="caption"><a href="#Mindpeace"><b>Mindpeace Mobile APP Design</b></a></div>
                     </div>
                     <div class="swiper-slide">
                       <img class="img-fluid" src="assets/projects/PAMS.jpg">
-                      <div class="caption"><a href="#">Mindpiece Mobile APP Design</a></div>
+                      <div class="caption"><a href="#PAMS"><b>PAMS Business Consultation</b></a></div>
                     </div>
                     <div class="swiper-slide">
                       <img class="img-fluid" src="assets/projects/Wegmans.png">
-                      <div class="caption"><a href="#">Mindpiece Mobile APP Design</a></div>
+                      <div class="caption"><a href="#Wegmans"><b>Wegmans Social Network Design</b></a></div>
                     </div>
                 </div>
                 <!-- Add Pagination -->
@@ -207,9 +241,9 @@
         <h2 class="mb-3 sub_title">Basic Information</h2>
         <p class="basic_info_body">
           <b>Role:</b> Product Manager and Web APP Developer<br>
-          <b>Industry:</b> Non-profit organization<br>
+          <b>Industry:</b> Non-Profit Organization<br>
           <b>Tech Tool:</b> Python Django<br>
-          <b>Project Length:</b> 2 month development & up to date maintenance<br>
+          <b>Project Length:</b> 3-month development & up to date maintenance<br>
           <b>Client:</b> International Chinese Reading Association (ICRA)<br>
           <b>Link:</b> <a href="https://www.chinesestorytime.org/en/starbook/" target="_blank">starBook Web APP Link</a><br>
         </p>
@@ -225,7 +259,7 @@
     <div class="row">
       <div class="col-md-3">
           <!-- Tabs nav -->
-          <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <div class="nav flex-column nav-pills nav-pills-custom" id="v-starBook-tab" role="tablist" aria-orientation="vertical">
               <a class="nav-link mb-3 p-3 shadow active" id="client-demands-tab" data-toggle="pill" href="#client-demands" role="tab" aria-controls="client-demands" aria-selected="true">
                   <i class="far fa-user-circle mr-2"></i>
                   <span class="font-weight-bold small text-uppercase">Client Demands</span></a>
@@ -252,24 +286,30 @@
 
       <div class="col-md-9">
           <!-- Tabs content -->
-          <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-content" id="v-starBook-tabContent">
               <div class="tab-pane fade shadow rounded bg-white show active p-5" id="client-demands" role="tabpanel" aria-labelledby="client-demands-tab">
                 <h4 class="mb-3">Understanding Client’s Demands and Requirements</h4>
-                <p class="font-italic text-muted mb-3">Besides carefully listening to my client, I worked with my client to envision the product from random ideas to a coherent application program that has specific goals to serve the organization.</p>
+                <p class="font-italic text-muted mb-3">Besides carefully listening to my client, I worked with my client to envision the product from random ideas to a coherent application program with specific goals.</p>
                 <p class="text-muted mb-3"><b>Main Challenges:</b>
                   <ul class="text-muted">
-                    <ol>1. The client did not have a clear vision for the project</ol>
+                    <ol>1. The client did not have a clear vision for the project.</ol>
                     <ol>2. The client was not familiar with Web APP development.</ol>
                   </ul>
                 </p>
-                <p class="text-muted mb-3"><b>Strategy:</b> I had conversations with different stakeholders involved in the starBook program - discussed their needs, sorted out their ideas, and transformed them into effective product goals. I also researched similar products or prototypes to visualize thoughts and clarify any confusion. The key points were to give them enough time to think and actively follow up with them to welcome new thoughts and possible improvements.</p>
-                <p class="text-muted mb-4"><b>Deliverable:</b> A project proposal detailing the project vision, project goal, implementation plan, potential risks, and communication plan.</p>
+                <p class="text-muted mb-3"><b>Strategy:</b>
+                  <ul class="text-muted">
+                    <ol>1. Through conversations with different stakeholders, I discussed their needs, sorted out their ideas, and transformed them into effective product goals.</ol>
+                    <ol>2. I researched similar products or prototypes to visualize thoughts and clarify any confusion.</ol>
+                    <ol>3. The key points were to create flexibility for stakeholders to think and propose new thoughts.</ol>
+                  </ul>
+                </p>
+                <p class="text-muted mb-4"><b>Deliverable:</b> A project proposal details the project vision, project goal, implementation plan, potential risks, and communication plan.</p>
                 <img width="100%" src="assets/projects/starBook_proposal.png">
               </div>
               
               <div class="tab-pane fade shadow rounded bg-white p-5" id="target-users" role="tabpanel" aria-labelledby="target-users-tab">
                   <h4 class="mb-3">Target Users’ Analysis and Web APP Flowchart Design</h4>
-                  <p class="font-italic text-muted mb-3">The Web APP is designed to serve two types of users, program participating parents and program managers. Therefore, there are two basic personas created below.</p>
+                  <p class="font-italic text-muted mb-3">The Web APP is designed for two types of users, program participating parents and program managers. Two basic personas are created below.</p>
                   <div class="row d-flex align-items-center justify-content-center">
                     <div class="col-md-2 text-center"><img class="mb-3" width="80%" src="assets/projects/starBook_personas_1.png"></div>
                     <div class="col-md-10 mx-atuo">
@@ -282,15 +322,15 @@
                       <p class="text-muted mb-3" style="font-size: 16px;"><b>Tim</b>, 28 years old, an ICRA volunteer for the starBook program. He needs to use the program Web APP to manage the book collection list. He has his administration account and can upload, download, modify, and delete any book record in the administration interface.</p>
                     </div>
                   </div>
-                  <p class="text-muted"><b>Deliverable:</b> A flowchart to map the book recommendation or comment process.</p>
+                  <p class="text-muted"><b>Deliverable:</b> A flowchart maps the book recommendation or comment process.</p>
                   <img width="90%" src="assets/projects/starBook_flowchart.png">
               </div>
               
               <div class="tab-pane fade shadow rounded bg-white p-5" id="wireframe" role="tabpanel" aria-labelledby="wireframe-tab">
                 <h4 class="mb-3">Web APP Wireframe Design</h4>
                 <p class="font-italic text-muted mb-3">To better visualize the Web APP and discuss the design with my client, I sketched main page wireframes and revised them during meetings.</p>
-                <p class="text-muted mb-3"><b>Strategy:</b> Because the client might want to add and drop elements anytime, I sketched wireframes so that both my client and I could make instant changes during our conversations instead of wasting time waiting for me to make changes on fancy mockup tools.</p>
-                <p class="text-muted"><b>Deliverable:</b> Final sketch wireframes illustrating structures of the program home page and book collection page.</p>
+                <p class="text-muted mb-3"><b>Strategy:</b> I sketched wireframes for my client to make instant changes during our conversations. Thus, we would not waste time making changes to fancy mockup tools.</p>
+                <p class="text-muted"><b>Deliverable:</b> Final sketch wireframes illustrate structures of the program home page and book collection page.</p>
                 <div class="text-center">
                   <img width="45%" src="assets/projects/starBook_wireframe_1.jpg">
                   <img width="45%" src="assets/projects/starBook_wireframe_2.jpg">
@@ -300,8 +340,13 @@
               <div class="tab-pane fade shadow rounded bg-white p-5" id="development" role="tabpanel" aria-labelledby="development-tab">
                   <h4 class="mb-3">Web APP Development and Weekly Iteration</h4>
                   <p class="font-italic text-muted mb-3">I applied the Agile methodology to better interact with my client and improve the project flexibility to changes.</p>
-                  <p class="text-muted mb-3"><b>Strategy:</b> Through weekly iteration meetings, development updates from me, feedback from my client, and goals for the next phase could all be communicated immediately and implemented in a weekly cycle. I also frequently revisited the product goals with my client to make sure the project is on the right track fulfilling the product’s business value.</p>
-                  <p class="text-muted mb-3"><b>Significant Improvement:</b> Incorporated batch data import feature to simplify the data entry process for program managers.</p>
+                  <p class="text-muted mb-3"><b>Strategy:</b>
+                    <ul class="text-muted">
+                      <ol>1. Through iteration meetings, I updated development progress, received feedback from my client, and made improvements spontaneously in a weekly cycle.</ol>
+                      <ol>2. I frequently revisited the product goals with my client to make sure the project is on the right track fulfilling the product’s business value.</ol>
+                    </ul>
+                  </p>
+                  <p class="text-muted mb-3"><b>Significant Improvement:</b> Incorporated batch data import feature simplifies the data entry process for program managers.</p>
                   <img width="90%" src="assets/projects/starBook_django.png">
               </div>
 
@@ -310,20 +355,22 @@
                 <p class="font-italic text-muted mb-3">Both internal testing and external feedback collection were implemented.</p>
                 <p class="text-muted mb-3"><b>Internal Testing:</b> The Web APP was firstly tested by program managers to test functionalities and fix bugs.</p>
                 <p class="text-muted mb-3"><b>External Feedback Collection:</b> The Web APP was then launched to collect user experience feedback from participating parents (public users).</p>
-                <p class="text-muted mb-3"><b>Significant Improvement:</b> Integrated Google Books API to search and auto-fill book information, thus leaving less work for parents and encouraging them to recommend books through Web APP.</p>
+                <p class="text-muted mb-3"><b>Significant Improvement:</b> Integrated Google Books API searches and auto-fills book information for parents, which reduces parents’ workload and encourages them to recommend books through Web APP.</p>
                 <img width="100%" src="assets/projects/starBook_2.gif">
             </div>
 
             <div class="tab-pane fade shadow rounded bg-white p-5" id="expansion" role="tabpanel" aria-labelledby="expansion-tab">
               <h4 class="mb-3">Web APP Maintenance and Expansion</h4>
-              <p class="font-italic text-muted mb-3">Maintenance is scheduled every two months as more feedback is collected.</p>
-              <p class="text-muted mb-3">Meanwhile, thanks to the positive reaction from users, my client decided to expand the Web APP to be its organization website. I will be responsible for designing more features to continue providing valuable information to the target audience.</p>
+              <p class="font-italic text-muted mb-3">As more feedback is collected, maintenance is scheduled every two months.</p>
+              <p class="text-muted mb-3">Thanks to the positive reaction from users, my client decided to expand the Web APP to be its organization website. I will be responsible for designing more features to continue providing valuable information to the target audience.</p>
               <img width="100%" src="assets/projects/starBook_website.gif">
             </div>
 
           </div>
       </div>
     </div>
+
+    <!-- project reflection -->
     <div class="row mt-5 d-flex align-items-center justify-content-center">
       <div class="col-md-12 text-center">
         <h2 class="mb-4 sub_title">Reflection</h2>
@@ -331,23 +378,288 @@
     </div>
     <div class="row d-flex align-items-center justify-content-center">
       <div class="col-md-9 reflection_text">
-        While most development processes are taught step by step, in reality, my client came to me with almost nothing in mind. It is critical for me, as a product manager, to help my client envision the product through conversations and prototyping. Clients could come without preparation, but they will leave the meeting with clear plans and product visions.
+        In reality, clients do not come with well-structured demands. It is critical for me, as a product manager, to help my client envision the product through conversations and prototypes.
+      </div>
+      <div class="col-md-3 text-center">
+        <img width="100%" src="assets/projects/reflection.png">
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+
+
+<section class="py-5 back_area" id="Mindpeace">
+  <div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-md-12 text-center">
+        <h1 class="my_feature">Mindpeace Mobile APP Design</h1>
+      </div>
+    </div>
+
+    <!-- basic info -->
+    <div class="row mt-5 d-flex align-items-center justify-content-center">
+      <div class="col-md-5 text-center">
+        <img width="100%" src="assets/projects/Mindpeace.png">
+      </div>
+      <div class="col-md-6 offset-1">
+        <h2 class="mb-3 sub_title">Basic Information</h2>
+        <p class="basic_info_body">
+          <b>Role:</b> Product Manager and Designer<br>
+          <b>Industry:</b> Mental Health<br>
+          <b>Tech Tool:</b> Balsamiq<br>
+          <b>Project Length:</b> 1.5-month school project<br>
+        </p>
+      </div> 
+    </div>
+
+    
+    <!-- project story -->
+    <div class="row mt-5 d-flex align-items-center justify-content-center">
+      <div class="col-md-12 text-center">
+        <h2 class="mb-4 sub_title">Project Story</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+          <!-- Tabs nav -->
+          <div class="nav flex-column nav-pills nav-pills-custom" id="v-Mindpeace-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link mb-3 p-3 shadow active" id="big-idea-tab" data-toggle="pill" href="#big-idea" role="tab" aria-controls="big-idea" aria-selected="true">
+                  <i class="far fa-lightbulb mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Idea & Market</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="users-pitch-tab" data-toggle="pill" href="#users-pitch" role="tab" aria-controls="users-pitch" aria-selected="false">
+                  <i class="fas fa-users mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Users & Pitch</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="viability-feasibility-tab" data-toggle="pill" href="#viability-feasibility" role="tab" aria-controls="viability-feasibility" aria-selected="false">
+                  <i class="fas fa-question mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Viability & Feasibility</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="UI-UX-tab" data-toggle="pill" href="#UI-UX" role="tab" aria-controls="UI-UX" aria-selected="false">
+                  <i class="fas fa-palette mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">UI & UX</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="mobile-development-tab" data-toggle="pill" href="#mobile-development" role="tab" aria-controls="mobile-development" aria-selected="false">
+                  <i class="fas fa-desktop mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Development</span></a>
+              <a class="nav-link mb-3 p-3 shadow" id="marketing-tab" data-toggle="pill" href="#marketing" role="tab" aria-controls="marketing" aria-selected="false">
+                <i class="fas fa-coins mr-2"></i>
+                <span class="font-weight-bold small text-uppercase">Marketing & Growth</span></a>
+          </div>
+      </div>
+
+      <div class="col-md-9">
+          <!-- Tabs content -->
+          <div class="tab-content" id="v-Mindpeace-tabContent">
+              <div class="tab-pane fade shadow rounded bg-white show active p-5" id="big-idea" role="tabpanel" aria-labelledby="big-idea-tab">
+                <h4 class="mb-3">The Big Idea & The Market</h4>
+                <p class="text-muted mb-3"><b>Market Opportunity:</b></p>
+                <p class="text-muted mb-3">There are about <span class="red_word">44 million</span> people who struggle with <span class="red_word">mental illness</span> every year in the US. That is, <span class="red_word">1 in 6</span> people is having different levels of mental illness issues.</p>
+                <p class="text-muted mb-3" style="float: right;">---- National Institute of Mental Health</p><br>
+                <p class="text-muted mb-3"><b>Problems:</b>
+                  <ul class="text-muted">
+                    <li>No public place to express thoughts and release stress</li>
+                    <li>No easy way to consistently access stress-relief resources</li>
+                    <li>No time/too anxious to meet professional therapist face to face</li>
+                  </ul>
+                </p>
+                <img class="mb-4" width="50%" style="margin-left: 25%;" src="assets/projects/Mindpeace_problem.jpg">
+                <p class="text-muted mb-4"><b>Mindpeace Solution:</b></p>
+                <div class="text-muted mb-3" style="display: table-row;">
+                  <div style="width: 50%; display: inline-block;"><img width="100%" src="assets/projects/Mindpeace.png"></div>
+                  <div style="width: 50%; float: right;">
+                    <p class="text-muted mb-4" style="text-indent: 30px; padding: 30px 0;">A mobile APP allows people to relieve their stress by sharing thoughts and express concerns. The app will provide stress management resources and create a secure & private environment for people to mitigate anxiety.</p>
+                  </div>
+                </div>
+                <p class="text-muted mb-4"><b>Service:</b></p>
+                <div class="mindpeace_service">
+                  <i class="fas fa-comments"></i>
+                  <p>Anonymous public forums</p>
+                </div>                
+                <div class="mindpeace_service">
+                  <i class="far fa-smile"></i>
+                  <p>Stress management resources</p>
+                </div>
+                <div class="mindpeace_service">
+                  <i class="fas fa-headset"></i>
+                  <p>Professional therapist assistance</p>
+                </div>
+                <div class="mindpeace_service">
+                  <i class="far fa-calendar-alt"></i>
+                  <p>Stress relief events</p>
+                </div>
+              </div>
+
+
+            
+              <div class="tab-pane fade shadow rounded bg-white show p-5" id="users-pitch" role="tabpanel" aria-labelledby="users-pitch-tab">
+                <h4 class="mb-3">Target Users & Concept Pitch</h4>
+                <p class="text-muted mb-3"><b>Target Users:</b></p>
+                <p class="text-muted mb-3">16 to 30-year-old students and young adults with stressful schedules</p>
+                <p class="text-muted mb-3"><b>Sample Persona:</b></p>
+                <div class="text-muted mb-3" style="display: table-row;">
+                  <div style="width: 30%; display: inline-block; text-align: center; padding: 15px 0;">
+                    <img width="50%" src="assets/projects/Mindpeace_max.png">
+                    <p style="padding-top: 15px;">Name: Max
+                    <br>Age: 24
+                    <br>Marital Status: Single</p>
+                  </div>
+                  <div style="width: 70%; float: right;">
+                    <ul>
+                      <li>Max is a recent college graduate working an entry-level accounting job in a huge company.</li>
+                      <li>Working seems to be his whole life, and even worse he is single.</li>
+                      <li>He has few friends and a very minuscule and uninteresting social life.</li>
+                      <li>This routine has impacted his mental health very negatively. He is not motivated to do anything and cannot stay concentrated.</li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="text-muted mb-3"><b>Journey Map:</b></p>
+                <img class="mb-3" width="100%" src="assets/projects/Mindpeace_journey_map.png">
+                <p class="text-muted mb-3"><b>Concept Pitch:</b></p>
+                <p class="text-muted mb-3">Five concept pitches are conducted with randomly selected target users.</p>
+                <!-- Tester Swiper -->
+                <div class="swiper-container" id="Mindpeace_tests">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/projects/Mindpeace_test1.png"></div>
+                    <div class="swiper-slide"><img src="assets/projects/Mindpeace_test2.png"></div>
+                    <div class="swiper-slide"><img src="assets/projects/Mindpeace_test3.png"></div>
+                    <div class="swiper-slide"><img src="assets/projects/Mindpeace_test4.png"></div>
+                    <div class="swiper-slide"><img src="assets/projects/Mindpeace_test5.png"></div>
+                  </div>
+                  <!-- Add Pagination -->
+                  <div class="swiper-pagination"></div>
+                  <!-- Add Arrows -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+                <p class="text-muted mb-3"><b>Feedback & Improvements:</b><br>
+                  <ul>
+                    <li>People thought the APP was a convenient platform for stress relief.</li>
+                    <li>The APP should provide more varieties of stress management resources.</li>
+                    <li>The APP should organize special stress relief events.</li>
+                  </ul>
+                </p>
+              </div>
+              
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="viability-feasibility" role="tabpanel" aria-labelledby="viability-feasibility-tab">
+                  <h4 class="mb-3">Viability & Feasibility</h4>
+                  <p class="text-muted mb-3"><b>Competitor Research:</b></p>
+                  <img width="100%" src="assets/projects/Mindpeace_competitor.png">
+                  <p class="text-muted mb-3"><b>Revenue Model:</b></p>
+                  <div class="text-muted mb-3" style="display: table-row;">
+                    <div style="width: 50%; display: inline-block;"><img width="100%" style="float: left;" src="assets/projects/Mindpeace_revenue.jpg"></div>
+                    <div style="width: 50%; float: right;">
+                      <p class="text-muted" style="padding: 30px 0;">
+                          <ul>
+                            <li>Advertisements</li>
+                            <li>Professional Meditation Guide</li>
+                            <li>One-on-one consultation service</li>
+                          </ul>
+                        </p>
+                    </div> 
+                  </div>
+                  <p class="text-muted mt-3 mb-3"><b>Potential Regulatory Constraints:</b></p>
+                  <p class="text-muted mb-3">
+                    <ul>
+                      <li>Forum and one-on-one chat information must be secured on the server and keep private.</li>
+                      <li>Mental health professionals must be qualified to provide consulting services according to state regulations.</li>
+                    </ul>
+                  </p>
+              </div>
+              
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="UI-UX" role="tabpanel" aria-labelledby="UI-UX-tab">
+                <h4 class="mb-3">UI & UX</h4>
+                <p class="text-muted mb-3"><b>Balsamiq Mockup:</b></p>
+                <div class="mb-3" style="margin-left: 35%">
+                  <a href="https://share.balsamiq.com/ps/sFFj7g2rZsmJZXiQhmtVNr?r=8FCE&f=N4IgUiBcAMA0IDkpxAYWfAMhkAhHAsjgFo4DSUA2gLoC%2BQA%3D" target="_blank">
+                    <img width="25%" src="assets/projects/Mindpeace_UI.gif"></a>
+                  <a href="https://share.balsamiq.com/ps/sFFj7g2rZsmJZXiQhmtVNr?r=8FCE&f=N4IgUiBcAMA0IDkpxAYWfAMhkAhHAsjgFo4DSUA2gLoC%2BQA%3D" target="_blank">
+                    Click Me to Play!</a>
+                </div>
+                <p class="text-muted mb-3"><b>Major UX Improvement:</b></p>
+                <p class="text-muted mb-3"><span style="text-decoration: underline;">Original Menu Design:</span> Unless the menu icon is clicked, the menu bar would be hidden off the screen.</p>
+                <p class="text-muted mb-3"><span style="text-decoration: underline;">Feedback:</span> The first round of testers reported that such a design made it hard to switch between different views.</p>
+                <p class="text-muted mb-3"><span style="text-decoration: underline;">Improvement:</span> Four view tabs for home, forum, recreation, and therapy are added at the bottom of the screen for the convenient view switch.</p>
+              </div>
+              
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="mobile-development" role="tabpanel" aria-labelledby="mobile-development-tab">
+                  <h4 class="mb-3">Development Strategies</h4>
+                  <p class="text-muted mb-3"><b>Architecture:</b> Cross-Platform</p>
+                  <p class="text-muted mb-3">
+                    <ul>
+                      <li><span style="text-decoration: underline;">Web:</span> Provide APP marketing information, APP download links, and stress management packages such as Yoga video and meditation guide.</li>
+                      <li><span style="text-decoration: underline;">Mobile APP:</span> Access to the anonymous public forum, nearby events, live streaming stress relief resources, and one-on-one consultation service.</li>
+                    </ul>
+                  </p>
+                  <p class="text-muted mb-3"><b>Operating System and Store:</b> Considering the development cost, the APP will only be available on the Apple Store (iOS) at the first stage.</p>
+                  <p class="text-muted mb-3"><b>Development Plan:</b></p>
+                  <!-- Development Swiper -->
+                  <div class="swiper-container" id="Mindpeace_development">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="assets/projects/Mindpeace_development1.png"></div>
+                      <div class="swiper-slide"><img src="assets/projects/Mindpeace_development2.png"></div>
+                      <div class="swiper-slide"><img src="assets/projects/Mindpeace_development3.png"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+              </div>
+
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="marketing" role="tabpanel" aria-labelledby="marketing-tab">
+                <h4 class="mb-3">Marketing Strategies & Growth Projection</h4>
+                <p class="text-muted mb-3"><b>Marketing Strategies:</b></p>
+                <p class="text-muted mb-3">
+                  <ul>
+                    <li><span style="text-decoration: underline;">App-Store Optimization:</span> Select strategic key-words for search engine optimization</li>
+                    <li><span style="text-decoration: underline;">Reviewing Rewards:</span> Offer discounted price services for users who review the APP</li>
+                    <li><span style="text-decoration: underline;">Social Media Campaigns:</span> Partner with popular social media influencers in the target market to promote the APP</li>
+                    <li><span style="text-decoration: underline;">App Referrals:</span> Design rewards program for referrals that lead to downloads</li>
+                    <li><span style="text-decoration: underline;">Blogs:</span> Create an alternative medium  that attracts followers to the APP</li>
+                  </ul>
+                </p>
+                <p class="text-muted mb-3"><b>Growth Projection:</b></p>
+                <div class="text-muted mb-3" style="display: table-row;">
+                  <div style="width: 50%; display: inline-block;">
+                    <p class="text-muted mb-3">Projected Market Size:</p>
+                    <img width="75%" src="assets/projects/Mindpeace_market_size.jpg">
+                  </div>
+                  <div style="width: 50%; float: right;">
+                    <p class="text-muted mb-3">Projected Income Statement:</p>
+                    <img width="80%" src="assets/projects/Mindpeace_growth.png">
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- project reflection -->
+    <div class="row mt-5 d-flex align-items-center justify-content-center">
+      <div class="col-md-12 text-center">
+        <h2 class="mb-4 sub_title">Reflection</h2>
+      </div>
+    </div>
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-md-9 reflection_text">
+        End users must be engaged throughout the design and development phases. Usability testing is vital for receiving instant feedback and improving user experience.
       </div>
       <div class="col-md-3 text-center">
         <img width="100%" src="assets/projects/reflection.png">
       </div>
     </div>
 
-    <!-- project reflection -->
-    
   </div>
 </section>
-<section class="py-5 back_area">
-  <div class="container">
-    <div class="row d-flex align-items-center justify-content-center"></div>
-    
-  </div>
-</section>
+
+
+
+
 <section class="personality py-5">
   <div class="container">
     

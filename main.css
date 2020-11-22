@@ -24,6 +24,10 @@ section {
   scroll-margin-top: 2em;
 }
 
+section:first-of-type{
+  opacity: 1;
+}
+
 .no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
 .se-pre-con {

@@ -10,16 +10,16 @@ header {
     width: 60%;
 }
 
-.swiper-container {
+#project_list_swiper {
     padding: 50px 0;
     margin:0 5%;
 }
 
-.swiper-slide {
+#project_list_swiper .swiper-slide {
     width: 80%;
 }
 
-.swiper-slide .caption {
+#project_list_swiper .swiper-slide .caption {
     background-color: rgba(248, 244, 237, 0.8);
     width: 100%;
     position: absolute;
@@ -27,12 +27,12 @@ header {
     padding: 5px 0;
 }
 
-.swiper-slide .caption a {
+#project_list_swiper .swiper-slide .caption a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
 }
 
-.swiper-slide .caption a:hover {
+#project_list_swiper .swiper-slide .caption a:hover {
     opacity: 0.8;
 }
 
@@ -87,4 +87,55 @@ header {
     font-size: 25px;
     border-left: 6px solid var(--banner_pink);
     padding-left: 25px;
+}
+
+ul ol {
+    padding: 3px 0;
+}
+
+.red_word {
+    font-size: 22px;
+    color: var(--banner_pink);
+}
+
+.mindpeace_service {
+    width: 25%;
+    display: table-cell;
+    text-align: center;
+    font-size: 15px;
+}
+
+.mindpeace_service i {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.mindpeace_service .fas {
+    color: var(--banner_pink);
+}
+
+.mindpeace_service .far {
+    color: var(--banner_green);
+}
+
+#Mindpeace_tests .swiper-wrapper {
+    padding-bottom: 50px;
+}
+
+#Mindpeace_tests .swiper-wrapper .swiper-slide img {
+    width: 90%;
+    margin: 0 3.5%;
+}
+
+#Mindpeace_development .swiper-wrapper {
+    padding-bottom: 50px;
+}
+
+#Mindpeace_development .swiper-wrapper .swiper-slide img {
+    width: 90%;
+    margin: 0 4.5%;
+}
+
+.tab-content h4 {
+    text-align: center;
 }

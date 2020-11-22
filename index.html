@@ -45,13 +45,13 @@
     $(window).scroll( function(){
     
     /* Check the location of each desired element */
-    $('section').each( function(i){
+    $('section').slice(1).each( function(i){
         
-        var middle_of_object = $(this).position().top + $(this).outerHeight()/4;
+        var desired_object = $(this).position().top + 10;
         var bottom_of_window = $(window).scrollTop() + $(window).height();
         
-        /* If the object is completely visible in the window, fade it in*/
-        if( bottom_of_window > middle_of_object ){
+        /* If the object is visible in the window, fade it in*/
+        if( bottom_of_window > desired_object ){
             
             $(this).animate({'opacity':'1'},1500);
        
@@ -86,7 +86,7 @@
   function scrollFunction() {
     if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
       document.getElementsByClassName("navbar")[0].style.padding = "5px 10px";
-      if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         document.getElementById("back_to_top").style.display = "block";
       }
     } else {
@@ -173,6 +173,9 @@
         <h2 class="intro_text">Create the Best for Human Use</h2>
       </div>
     </ul>
+
+    <div class="scroll_symbol"><a href="#self-intro"><i class="fas fa-arrow-circle-down"></i></a></div>
+
   </header>
 
     <!-- no parallax effect for tablet or mobile -->
@@ -183,13 +186,14 @@
           <h1 class="jiashuzhang">ZHANG</h1>
           <h2 class="intro_text">Create the Best for Human Use</h2>
         </div>
+        <div class="scroll_symbol"><a href="#self-intro"><i class="fas fa-arrow-circle-down"></i></a></div>
     </header>
 
     <!-- back to top button -->
     <button onclick="topFunction()" id="back_to_top" title="Go to top">Top</button>
 
 <!-- Page Content -->
-<section class="py-5">
+<section class="py-5" id="self-intro">
   <div class="container">
     <div class="row d-flex align-items-center justify-content-center">
       <!-- self photo -->
