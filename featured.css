@@ -17,6 +17,7 @@ header {
 
 #project_list_swiper .swiper-slide {
     width: 80%;
+    overflow: hidden;
 }
 
 #project_list_swiper .swiper-slide .caption {
@@ -27,13 +28,18 @@ header {
     padding: 5px 0;
 }
 
-#project_list_swiper .swiper-slide .caption a {
+#project_list_swiper .swiper-slide a {
     text-decoration: none;
     font-size: 25px;
 }
 
-#project_list_swiper .swiper-slide .caption a:hover {
-    opacity: 0.8;
+#project_list_swiper .swiper-slide img {
+    transition: 0.3s;
+}
+
+#project_list_swiper .swiper-slide img:hover {
+    opacity: 0.6;
+    transform: scale(1.1);
 }
 
 .sub_title {
@@ -47,7 +53,8 @@ header {
 }
 
 .nav-pills-custom .nav-link:hover {
-    color: var(--banner_pink);
+    color: var(--banner_green);
+    opacity: 0.5;
 }
 
 .nav-pills-custom .nav-link {
