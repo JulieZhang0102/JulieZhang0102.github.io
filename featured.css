@@ -52,6 +52,11 @@ header {
     margin-bottom: 0;
 }
 
+.nav-pills-custom {
+    position: sticky;
+    top: 70px;
+}
+
 .nav-pills-custom .nav-link:hover {
     color: var(--banner_green);
     opacity: 0.5;
@@ -96,11 +101,11 @@ header {
     padding-left: 25px;
 }
 
-ul ol {
+.tab-content ul ol {
     padding: 5px 0;
 }
 
-ul li {
+.tab-content ul li {
     padding: 5px 0;
 }
 

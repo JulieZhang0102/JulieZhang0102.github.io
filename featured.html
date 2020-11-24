@@ -125,6 +125,18 @@
           },
         });
 
+
+        $('.nav-pills .nav-link').on('shown.bs.tab', function(e) {
+          var href = $(this).attr('href');
+          var top_of_href = $(href).offset().top;
+          var top_of_screen = $(window).scrollTop();
+          if (top_of_screen > top_of_href) {
+            $('html, body').animate({
+            scrollTop: top_of_href - 150
+          }, 80);
+          }
+        });
+
   });
 
 
@@ -879,9 +891,175 @@
 
 
 
-<section class="py-5 back_area">
+<section class="py-5 back_area" id="Wegmans">
   <div class="container">
-    
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-md-12 text-center">
+        <h1 class="my_feature">Wegmans Social Network Design</h1>
+      </div>
+    </div>
+
+    <!-- basic info -->
+    <div class="row mt-5 d-flex align-items-center justify-content-center">
+      <div class="col-md-5 text-center">
+        <img width="100%" src="assets/projects/Wegmans.png">
+      </div>
+      <div class="col-md-6 offset-1">
+        <h2 class="mb-3 sub_title">Basic Information</h2>
+        <p class="basic_info_body">
+          <b>Role:</b> Social Media Manager<br>
+          <b>Industry:</b> Food Retail<br>
+          <b>Tech Tool:</b> NUVI social listening<br>
+          <b>Project Length:</b> 1-month school project<br>
+        </p>
+      </div> 
+    </div>
+
+    <!-- project story -->
+    <div class="row mt-5 d-flex align-items-center justify-content-center">
+      <div class="col-md-12 text-center">
+        <h2 class="mb-4 sub_title">Project Story</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+          <!-- Tabs nav -->
+          <div class="nav flex-column nav-pills nav-pills-custom" id="v-Wegmans-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link mb-3 p-3 shadow active" id="industry-competitor-tab" data-toggle="pill" href="#industry-competitor" role="tab" aria-controls="industry-competitor" aria-selected="true">
+                  <i class="fas fa-bullseye mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Industry</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="current-performance-tab" data-toggle="pill" href="#current-performance" role="tab" aria-controls="current-performance" aria-selected="false">
+                  <i class="fas fa-poll mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Performances</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="network-design-tab" data-toggle="pill" href="#network-design" role="tab" aria-controls="network-design" aria-selected="false">
+                  <i class="far fa-hand-point-up mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Improvements</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="metric-tab" data-toggle="pill" href="#metric" role="tab" aria-controls="metric" aria-selected="false">
+                  <i class="fas fa-balance-scale mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Metrics</span></a>
+              <a class="nav-link mb-3 p-3 shadow" id="risks-methods-tab" data-toggle="pill" href="#risks-methods" role="tab" aria-controls="risks-methods" aria-selected="false">
+                <i class="fas fa-exclamation-triangle mr-2"></i>
+                <span class="font-weight-bold small text-uppercase">Risks & Methods</span></a>
+              </div>
+      </div>
+
+      <div class="col-md-9">
+          <!-- Tabs content -->
+          <div class="tab-content" id="v-Wegmans-tabContent">
+              <div class="tab-pane fade shadow rounded bg-white show active p-5" id="industry-competitor" role="tabpanel" aria-labelledby="industry-competitor-tab">
+                <h4 class="mb-3">Clarify and Break Down the Problem</h4>
+                <p class="text-muted mb-3"><b>The Problem:</b></p>
+                <div class="row mb-3 d-flex align-items-center justify-content-center">
+                  <div class="col-md-2 text-center"><img width="60%" src="assets/projects/PAMS_problem1.png"></div>
+                  <div class="col-md-1 text-center"><i style="font-size: 30px;" class="fas fa-arrow-right"></i></div>
+                  <div class="col-md-2 text-center"><img width="100%" src="assets/projects/PAMS_problem2.png"></div>
+                  <div class="col-md-7 pt-3">
+                    <p class="text-muted">The lack of operations data & information makes the director disconnected from the company, which leads to other manufacturing issues.</p>
+                    <p class="text-muted">The goal is to bridge the gap so that upper-managers could manage the company with real-time information.</p>
+                  </div>
+                </div>
+                <p class="text-muted mb-3"><b>Break Down the Problem:</b></p>
+                <img width="100%" src="assets/projects/PAMS_problem_breakdown.png">
+              </div>
+              
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="current-performance" role="tabpanel" aria-labelledby="current-performance-tab">
+                  <h4 class="mb-3">Target Setting</h4>
+                  <p class="text-muted mb-3">
+                    <ul>
+                      <li>Check 100% of employees’ daily attendance</li>
+                      <li>Track 98% of machine downtime & corresponding reasons</li>
+                      <li>Digitize and manage 75% of data in real-time</li>
+                      <li>Generate reports in 2-3hrs upon request</li>
+                      <li>Ensure 90% of the data accuracy using the self-check procedure</li>
+                    </ul>
+                  </p>
+                  <img width="100%" src="assets/projects/PAMS_timeline.png">
+              </div>
+              
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="network-design" role="tabpanel" aria-labelledby="network-design-tab">
+                <h4 class="mb-3">Root Cause Analysis</h4>
+                <p class="text-muted mb-3"><b>Narrowed-Down Root Causes (red circles in the chart below):</b></p>
+                <p class="text-muted mb-3">
+                  <ul>
+                    <li>For managers: there is a lack of data tracking and management system.</li>
+                    <li>For machine operators: the data entry process is too complicated.</li>
+                  </ul>
+                </p>
+                <p class="text-muted mb-3"><b>Significant Breakthrough:</b></p>
+                <p class="text-muted mb-3">At first, managers kept telling us there was no data and report available for him to review, so we designed customized sheets to track data and generate reports.</p>
+                <p class="text-muted mb-3">However, we were still getting pushback from <span class="red_word">machine operators</span> who were responsible for data entry.</p>
+                <p class="text-muted mb-5">After interviewing machine operators and conducting anomalous surveys, we realized that there was only <span class="red_word">one computer</span> on the whole manufacturing floor. Thus, whenever operators need to input data, they need to walk across the entire factory. This complicated process <span class="red_word">discourages operators from recording valuable data</span> for the upper-management.</p>
+                <img width="100%" src="assets/projects/PAMS_root_cause.jpg">
+              </div>
+              
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="metric" role="tabpanel" aria-labelledby="metric-tab">
+                  <h4 class="mb-3">Develop Countermeasures</h4>
+                  <img class="mb-4" width="100%" src="assets/projects/PAMS_countermeasures.png">
+                  <p class="text-muted mb-3"><b>Material and Information Flow Chart (MIFC)</b> was crafted to understand the manufacturing process and support the design of data-tracking sheets.</p>
+                  <img class="mb-4" width="100%" src="assets/projects/PAMS_MIFC.png">
+              </div>
+
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="risks-methods" role="tabpanel" aria-labelledby="risks-methods-tab">
+                <h4 class="mb-3">Implementation, Iteration, and Improvement</h4>
+                <p class="text-muted mb-3"><b>Implementation Process:</b></p>
+                <img class="mb-4"style="margin:0 10%" width="80%" src="assets/projects/PAMS_implementation.png">
+                <p class="text-muted mb-3"><b>Implementation Results:</b></p>
+                <p class="text-muted mb-3" style="text-decoration: underline;">For data-tracking sheets design:</p>
+                <!-- Excel Experiments Swiper -->
+                <div class="swiper-container" id="PAMS_experiments">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/projects/PAMS_experiment1.jpg"></div>
+                    <div class="swiper-slide"><img src="assets/projects/PAMS_experiment2.png"></div>
+                    <div class="swiper-slide"><img src="assets/projects/PAMS_experiment3.png"></div>
+                  </div>
+                  <!-- Add Pagination -->
+                  <div class="swiper-pagination"></div>
+                  <!-- Add Arrows -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+                <p class="text-muted mb-3" style="text-decoration: underline;">ERP system research:</p>
+                <p class="text-muted mb-3">
+                  <ul>
+                    <ol>1. Five companies (Microsoft Dynamics, Odoo, ERPnext, Epicor, and Syspro: California) were compared.</ol>
+                    <ol>2. Odoo was selected as the optimal ERP system for advantages below: 
+                      <ul>
+                        <li>Cloud-based, open source ERP solution</li>
+                        <dd>-- Open source => new apps constantly being developed</dd>
+                        <li>Blockchain enabled</li>
+                        <dd>-- Improved tracking and security</dd>
+                        <li>4 million users</li>
+                        <dd>-- Lots of support through forums</dd>
+                      </ul>
+                    </ol>
+                    <ol>3. Functionality proposal:
+                      <img class="mb-3 mt-3" width="100%" src="assets/projects/PAMS_odoo_function.png"> 
+                    </ol>
+                    <ol>4. Implementation plan:
+                      <ul>
+                        <li>Odoo Gold Partner Implementation team</li>
+                        <dd>-- Sales contact information is given</dd>
+                        <li>Office is 200km from Mysore</li>
+                        <dd>-- On-site implementation request</dd>
+                        <dd>-- Remote implementation assistance</dd>
+                        <li>Professional consulting service for personalized implementation</li>
+                      </ul>
+                    </ol>
+                  </ul>
+                </p>
+            </div>
+
+          </div>
+      </div>
+    </div>
+
+
+
+
+
   </div>
 </section>
 
