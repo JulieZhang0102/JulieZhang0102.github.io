@@ -94,7 +94,23 @@
       });
 
       // Initialize Swiper for Mindpeace development strategy display
-      var swiper_test_list = new Swiper('#Mindpeace_development', {
+      var swiper_strategy_list = new Swiper('#Mindpeace_development', {
+          autoplay: { delay: 3000,},
+          centeredSlides: true,
+          observer: true,
+          observeParents: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+          },
+        });
+
+      // Initialize Swiper for PAMS excel experiments display
+      var swiper_excel_list = new Swiper('#PAMS_experiments', {
           autoplay: { delay: 3000,},
           centeredSlides: true,
           observer: true,
@@ -202,7 +218,7 @@
                     </div>
                     <div class="swiper-slide">
                       <a href="#PAMS"><img class="img-fluid" src="assets/projects/PAMS.jpg">
-                      <div class="caption"><b>PAMS Business Consultation</b></div></a>
+                      <div class="caption"><b>Lean Operations Consulting</b></div></a>
                     </div>
                     <div class="swiper-slide">
                       <a href="#Wegmans"><img class="img-fluid" src="assets/projects/Wegmans.png">
@@ -593,8 +609,8 @@
                   <p class="text-muted mb-3"><b>Architecture:</b> Cross-Platform</p>
                   <p class="text-muted mb-3">
                     <ul>
-                      <li><span style="text-decoration: underline;">Web:</span> Provide APP marketing information, APP download links, and stress management packages such as Yoga video and meditation guide.</li>
-                      <li><span style="text-decoration: underline;">Mobile APP:</span> Access to the anonymous public forum, nearby events, live streaming stress relief resources, and one-on-one consultation service.</li>
+                      <li>Web: Provide APP marketing information, APP download links, and stress management packages such as Yoga video and meditation guide.</li>
+                      <li>Mobile APP: Access to the anonymous public forum, nearby events, live streaming stress relief resources, and one-on-one consultation service.</li>
                     </ul>
                   </p>
                   <p class="text-muted mb-3"><b>Operating System and Store:</b> Considering the development cost, the APP will only be available on the Apple Store (iOS) at the first stage.</p>
@@ -619,11 +635,11 @@
                 <p class="text-muted mb-3"><b>Marketing Strategies:</b></p>
                 <p class="text-muted mb-3">
                   <ul>
-                    <li><span style="text-decoration: underline;">App-Store Optimization:</span> Select strategic key-words for search engine optimization</li>
-                    <li><span style="text-decoration: underline;">Reviewing Rewards:</span> Offer discounted price services for users who review the APP</li>
-                    <li><span style="text-decoration: underline;">Social Media Campaigns:</span> Partner with popular social media influencers in the target market to promote the APP</li>
-                    <li><span style="text-decoration: underline;">App Referrals:</span> Design rewards program for referrals that lead to downloads</li>
-                    <li><span style="text-decoration: underline;">Blogs:</span> Create an alternative medium  that attracts followers to the APP</li>
+                    <li>App-Store Optimization: Select strategic key-words for search engine optimization</li>
+                    <li>Reviewing Rewards: Offer discounted price services for users who review the APP</li>
+                    <li>App Referrals: Design rewards program for referrals that lead to downloads</li>
+                    <li>Blogs: Create an alternative medium  that attracts followers to the APP</li>
+                    <li>Social Media Campaigns: Partner with popular social media influencers in the target market to promote the APP</li>
                   </ul>
                 </p>
                 <p class="text-muted mb-3"><b>Growth Projection:</b></p>
@@ -663,11 +679,206 @@
 
 
 
-<section class="personality py-5">
+<section class="personality py-5" id="PAMS">
   <div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-md-12 text-center">
+        <h1 class="my_feature">Lean Operations Consulting</h1>
+      </div>
+    </div>
+
+    <!-- basic info -->
+    <div class="row mt-5 d-flex align-items-center justify-content-center">
+      <div class="col-md-5 text-center">
+        <img width="100%" src="assets/projects/PAMS.jpg">
+      </div>
+      <div class="col-md-6 offset-1">
+        <h2 class="mb-3 sub_title">Basic Information</h2>
+        <p class="basic_info_body">
+          <b>Role:</b> Lean Operations Consultant<br>
+          <b>Industry:</b> Aerospace<br>
+          <b>Project Length:</b> 2.5 months<br>
+          <b>Client:</b> A top aerospace manufacturer in India<br>
+        </p>
+      </div> 
+    </div>
+
+    <!-- project story -->
+    <div class="row mt-5 d-flex align-items-center justify-content-center">
+      <div class="col-md-12 text-center">
+        <h2 class="mb-4 sub_title">Project Story</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+          <!-- Tabs nav -->
+          <div class="nav flex-column nav-pills nav-pills-custom" id="v-PAMS-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link mb-3 p-3 shadow active" id="problem-tab" data-toggle="pill" href="#problem" role="tab" aria-controls="problem" aria-selected="true">
+                  <i class="fas fa-exclamation mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Problem</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="target-tab" data-toggle="pill" href="#target" role="tab" aria-controls="target" aria-selected="false">
+                  <i class="far fa-flag mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Targets</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="root-cause-tab" data-toggle="pill" href="#root-cause" role="tab" aria-controls="root-cause" aria-selected="false">
+                  <i class="fas fa-search-plus mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Root Causes</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="countermeasure-tab" data-toggle="pill" href="#countermeasure" role="tab" aria-controls="countermeasure" aria-selected="false">
+                  <i class="fas fa-cogs mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Countermeasures</span></a>
+              <a class="nav-link mb-3 p-3 shadow" id="implementation-tab" data-toggle="pill" href="#implementation" role="tab" aria-controls="implementation" aria-selected="false">
+                <i class="fas fa-check mr-2"></i>
+                <span class="font-weight-bold small text-uppercase">Implementation</span></a>
+              <a class="nav-link mb-3 p-3 shadow" id="result-process-tab" data-toggle="pill" href="#result-process" role="tab" aria-controls="result-process" aria-selected="false">
+                <i class="far fa-thumbs-up mr-2"></i>
+                <span class="font-weight-bold small text-uppercase">Results & Processes</span></a>
+              </div>
+      </div>
+
+      <div class="col-md-9">
+          <!-- Tabs content -->
+          <div class="tab-content" id="v-PAMS-tabContent">
+              <div class="tab-pane fade shadow rounded bg-white show active p-5" id="problem" role="tabpanel" aria-labelledby="problem-tab">
+                <h4 class="mb-3">Clarify and Break Down the Problem</h4>
+                <p class="text-muted mb-3"><b>The Problem:</b></p>
+                <div class="row mb-3 d-flex align-items-center justify-content-center">
+                  <div class="col-md-2 text-center"><img width="60%" src="assets/projects/PAMS_problem1.png"></div>
+                  <div class="col-md-1 text-center"><i style="font-size: 30px;" class="fas fa-arrow-right"></i></div>
+                  <div class="col-md-2 text-center"><img width="100%" src="assets/projects/PAMS_problem2.png"></div>
+                  <div class="col-md-7 pt-3">
+                    <p class="text-muted">The lack of operations data & information makes the director disconnected from the company, which leads to other manufacturing issues.</p>
+                    <p class="text-muted">The goal is to bridge the gap so that upper-managers could manage the company with real-time information.</p>
+                  </div>
+                </div>
+                <p class="text-muted mb-3"><b>Break Down the Problem:</b></p>
+                <img width="100%" src="assets/projects/PAMS_problem_breakdown.png">
+              </div>
+              
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="target" role="tabpanel" aria-labelledby="target-tab">
+                  <h4 class="mb-3">Target Setting</h4>
+                  <p class="text-muted mb-3">
+                    <ul>
+                      <li>Check 100% of employees’ daily attendance</li>
+                      <li>Track 98% of machine downtime & corresponding reasons</li>
+                      <li>Digitize and manage 75% of data in real-time</li>
+                      <li>Generate reports in 2-3hrs upon request</li>
+                      <li>Ensure 90% of the data accuracy using the self-check procedure</li>
+                    </ul>
+                  </p>
+                  <img width="100%" src="assets/projects/PAMS_timeline.png">
+              </div>
+              
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="root-cause" role="tabpanel" aria-labelledby="root-cause-tab">
+                <h4 class="mb-3">Root Cause Analysis</h4>
+                <p class="text-muted mb-3"><b>Narrowed-Down Root Causes (red circles in the chart below):</b></p>
+                <p class="text-muted mb-3">
+                  <ul>
+                    <li>For managers: there is a lack of data tracking and management system.</li>
+                    <li>For machine operators: the data entry process is too complicated.</li>
+                  </ul>
+                </p>
+                <p class="text-muted mb-3"><b>Significant Breakthrough:</b></p>
+                <p class="text-muted mb-3">At first, managers kept telling us there was no data and report available for him to review, so we designed customized sheets to track data and generate reports.</p>
+                <p class="text-muted mb-3">However, we were still getting pushback from <span class="red_word">machine operators</span> who were responsible for data entry.</p>
+                <p class="text-muted mb-5">After interviewing machine operators and conducting anomalous surveys, we realized that there was only <span class="red_word">one computer</span> on the whole manufacturing floor. Thus, whenever operators need to input data, they need to walk across the entire factory. This complicated process <span class="red_word">discourages operators from recording valuable data</span> for the upper-management.</p>
+                <img width="100%" src="assets/projects/PAMS_root_cause.jpg">
+              </div>
+              
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="countermeasure" role="tabpanel" aria-labelledby="countermeasure-tab">
+                  <h4 class="mb-3">Develop Countermeasures</h4>
+                  <img class="mb-4" width="100%" src="assets/projects/PAMS_countermeasures.png">
+                  <p class="text-muted mb-3"><b>Material and Information Flow Chart (MIFC)</b> was crafted to understand the manufacturing process and support the design of data-tracking sheets.</p>
+                  <img class="mb-4" width="100%" src="assets/projects/PAMS_MIFC.png">
+              </div>
+
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="implementation" role="tabpanel" aria-labelledby="implementation-tab">
+                <h4 class="mb-3">Implementation, Iteration, and Improvement</h4>
+                <p class="text-muted mb-3"><b>Implementation Process:</b></p>
+                <img class="mb-4"style="margin:0 10%" width="80%" src="assets/projects/PAMS_implementation.png">
+                <p class="text-muted mb-3"><b>Implementation Results:</b></p>
+                <p class="text-muted mb-3" style="text-decoration: underline;">For data-tracking sheets design:</p>
+                <!-- Excel Experiments Swiper -->
+                <div class="swiper-container" id="PAMS_experiments">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/projects/PAMS_experiment1.jpg"></div>
+                    <div class="swiper-slide"><img src="assets/projects/PAMS_experiment2.png"></div>
+                    <div class="swiper-slide"><img src="assets/projects/PAMS_experiment3.png"></div>
+                  </div>
+                  <!-- Add Pagination -->
+                  <div class="swiper-pagination"></div>
+                  <!-- Add Arrows -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+                <p class="text-muted mb-3" style="text-decoration: underline;">ERP system research:</p>
+                <p class="text-muted mb-3">
+                  <ul>
+                    <ol>1. Five companies (Microsoft Dynamics, Odoo, ERPnext, Epicor, and Syspro: California) were compared.</ol>
+                    <ol>2. Odoo was selected as the optimal ERP system for advantages below: 
+                      <ul>
+                        <li>Cloud-based, open source ERP solution</li>
+                        <dd>-- Open source => new apps constantly being developed</dd>
+                        <li>Blockchain enabled</li>
+                        <dd>-- Improved tracking and security</dd>
+                        <li>4 million users</li>
+                        <dd>-- Lots of support through forums</dd>
+                      </ul>
+                    </ol>
+                    <ol>3. Functionality proposal:
+                      <img class="mb-3 mt-3" width="100%" src="assets/projects/PAMS_odoo_function.png"> 
+                    </ol>
+                    <ol>4. Implementation plan:
+                      <ul>
+                        <li>Odoo Gold Partner Implementation team</li>
+                        <dd>-- Sales contact information is given</dd>
+                        <li>Office is 200km from Mysore</li>
+                        <dd>-- On-site implementation request</dd>
+                        <dd>-- Remote implementation assistance</dd>
+                        <li>Professional consulting service for personalized implementation</li>
+                      </ul>
+                    </ol>
+                  </ul>
+                </p>
+            </div>
+
+            <div class="tab-pane fade shadow rounded bg-white p-5" id="result-process" role="tabpanel" aria-labelledby="result-process-tab">
+              <h4 class="mb-3">Monitor Results and Standardize Processes</h4>
+              <p class="text-muted mb-3"><b>Results Achieved</b></p>
+              <img class="mb-5" width="100%" src="assets/projects/PAMS_results.png">
+              <p class="text-muted mb-3"><b>Standardize Successful Processes</b></p>
+              <img class="mb-3" width="100%" src="assets/projects/PAMS_process.png">
+            </div>
+
+          </div>
+      </div>
+    </div>
+
     
+    <!-- project reflection -->
+    <div class="row mt-5 d-flex align-items-center justify-content-center">
+      <div class="col-md-12 text-center">
+        <h2 class="mb-4 sub_title">Reflection</h2>
+      </div>
+    </div>
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-md-9 reflection_text">
+        Talk to all stakeholders involved in your project!!! Different stakeholders may have entirely different expectations for the same product. In this project, managers demand detailed data-tracking sheets for production planning purposes. However, machine operators ask for a simple data entry process with less distraction from their manufacturing work.
+      </div>
+      <div class="col-md-3 text-center">
+        <img width="100%" src="assets/projects/reflection.png">
+      </div>
+    </div>
+
+
   </div>
 </section>
+
+
+
+
+
 <section class="py-5 back_area">
   <div class="container">
     
