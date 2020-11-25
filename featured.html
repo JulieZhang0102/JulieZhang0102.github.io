@@ -15,6 +15,7 @@
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <script src="main.js" async></script>
+  <script src="feature.js" async></script>
   <link rel="stylesheet" type="text/css" href="featured.css">
   <link rel="shortcut icon" type="image/x-icon" href="assets/icon.ico"/>
   <!-- Google font -->
@@ -52,66 +53,6 @@
             prevEl: '.swiper-button-prev',
         },
     });
-
-    // Initialize Swiper for Mindpeace tester list display
-    var swiper_test_list = new Swiper('#Mindpeace_tests', {
-        autoplay: { delay: 3000,},
-        centeredSlides: true,
-        observer: true,
-        observeParents: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-        },
-      });
-
-      // Initialize Swiper for Mindpeace development strategy display
-      var swiper_strategy_list = new Swiper('#Mindpeace_development', {
-          autoplay: { delay: 3000,},
-          centeredSlides: true,
-          observer: true,
-          observeParents: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-          },
-        });
-
-      // Initialize Swiper for PAMS excel experiments display
-      var swiper_excel_list = new Swiper('#PAMS_experiments', {
-          autoplay: { delay: 3000,},
-          centeredSlides: true,
-          observer: true,
-          observeParents: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-          },
-        });
-
-
-        $('.nav-pills .nav-link').on('shown.bs.tab', function(e) {
-          var href = $(this).attr('href');
-          var top_of_href = $(href).offset().top;
-          var top_of_screen = $(window).scrollTop();
-          if (top_of_screen > top_of_href) {
-            $('html, body').animate({
-            scrollTop: top_of_href - 150
-          }, 80);
-          }
-        });
 
   });
 
@@ -187,7 +128,7 @@
                     </div>
                     <div class="swiper-slide">
                       <a href="#Wegmans"><img class="img-fluid" src="assets/projects/Wegmans.png">
-                      <div class="caption"><b>Wegmans Social Network Design</b></div></a>
+                      <div class="caption"><b>Wegmans Social Media Campaign</b></div></a>
                     </div>
                 </div>
                 <!-- Add Pagination -->
@@ -848,7 +789,7 @@
   <div class="container">
     <div class="row d-flex align-items-center justify-content-center">
       <div class="col-md-12 text-center">
-        <h1 class="my_feature">Wegmans Social Network Design</h1>
+        <h1 class="my_feature">Wegmans Social Media Campaign</h1>
       </div>
     </div>
 
@@ -878,11 +819,7 @@
       <div class="col-md-3">
           <!-- Tabs nav -->
           <div class="nav flex-column nav-pills nav-pills-custom" id="v-Wegmans-tab" role="tablist" aria-orientation="vertical">
-              <a class="nav-link mb-3 p-3 shadow active" id="industry-competitor-tab" data-toggle="pill" href="#industry-competitor" role="tab" aria-controls="industry-competitor" aria-selected="true">
-                  <i class="fas fa-bullseye mr-2"></i>
-                  <span class="font-weight-bold small text-uppercase">Industry</span></a>
-
-              <a class="nav-link mb-3 p-3 shadow" id="current-performance-tab" data-toggle="pill" href="#current-performance" role="tab" aria-controls="current-performance" aria-selected="false">
+              <a class="nav-link mb-3 p-3 shadow active" id="current-performance-tab" data-toggle="pill" href="#current-performance" role="tab" aria-controls="current-performance" aria-selected="true">
                   <i class="fas fa-poll mr-2"></i>
                   <span class="font-weight-bold small text-uppercase">Performances</span></a>
 
@@ -890,83 +827,103 @@
                   <i class="far fa-hand-point-up mr-2"></i>
                   <span class="font-weight-bold small text-uppercase">Improvements</span></a>
 
-              <a class="nav-link mb-3 p-3 shadow" id="metric-tab" data-toggle="pill" href="#metric" role="tab" aria-controls="metric" aria-selected="false">
+              <a class="nav-link mb-3 p-3 shadow" id="metric-risk-tab" data-toggle="pill" href="#metric-risk" role="tab" aria-controls="metric-risk" aria-selected="false">
                   <i class="fas fa-balance-scale mr-2"></i>
-                  <span class="font-weight-bold small text-uppercase">Metrics</span></a>
-              <a class="nav-link mb-3 p-3 shadow" id="risks-methods-tab" data-toggle="pill" href="#risks-methods" role="tab" aria-controls="risks-methods" aria-selected="false">
-                <i class="fas fa-exclamation-triangle mr-2"></i>
-                <span class="font-weight-bold small text-uppercase">Risks & Methods</span></a>
+                  <span class="font-weight-bold small text-uppercase">Metrics & Risks</span></a>
               </div>
       </div>
 
       <div class="col-md-9">
           <!-- Tabs content -->
           <div class="tab-content" id="v-Wegmans-tabContent">
-              <div class="tab-pane fade shadow rounded bg-white show active p-5" id="industry-competitor" role="tabpanel" aria-labelledby="industry-competitor-tab">
-                <h4 class="mb-3">Clarify and Break Down the Problem</h4>
-                <p class="text-muted mb-3"><b>The Problem:</b></p>
-                <div class="row mb-3 d-flex align-items-center justify-content-center">
-                  <div class="col-md-2 text-center"><img width="60%" src="assets/projects/PAMS_problem1.png"></div>
-                  <div class="col-md-1 text-center"><i style="font-size: 30px;" class="fas fa-arrow-right"></i></div>
-                  <div class="col-md-2 text-center"><img width="100%" src="assets/projects/PAMS_problem2.png"></div>
-                  <div class="col-md-7 pt-3">
-                    <p class="text-muted">The lack of operations data & information makes the director disconnected from the company, which leads to other manufacturing issues.</p>
-                    <p class="text-muted">The goal is to bridge the gap so that upper-managers could manage the company with real-time information.</p>
+              <div class="tab-pane fade shadow rounded bg-white show active p-5" id="current-performance" role="tabpanel" aria-labelledby="current-performance-tab">
+                  <h4 class="mb-3">Wegmans’ Social Media Performance</h4>
+                  <p class="text-muted mb-3"><b>3C & 2L Analysis</b></p>
+                  <div class="row mb-4 d-flex align-items-center justify-content-center">
+                    <div class="col-md-6">
+                      <p class="text-muted"><span style="text-decoration: underline;">Content:</span>
+                        <ul>
+                          <ol><i class="fas fa-check" style="color: lightgreen;"></i>&nbsp;High quality pictures</ol>
+                          <ol><i class="fas fa-times" style="color: red;"></i>&nbsp;&nbsp;No value-added content</ol>
+                        </ul>
+                      </p>
+                      <p class="text-muted"><span style="text-decoration: underline;">Collaborative Platform:</span>
+                        <ul >
+                          <ol><i class="fas fa-times" style="color: red;"></i>&nbsp;&nbsp;Weak cross platform linkage</ol>
+                          <ol><i class="fas fa-times" style="color: red;"></i>&nbsp;&nbsp;No internal & external stakeholders connection</ol>
+                        </ul>
+                      </p>
+                      <p class="text-muted"><span style="text-decoration: underline;">Listen and Learn:</span>
+                        <ul >
+                          <ol><i class="fas fa-times" style="color: red;"></i>&nbsp;&nbsp;Only one-way communication from Wegmans</ol>
+                          <ol><i class="fas fa-times" style="color: red;"></i>&nbsp;&nbsp;Low interactions, no insight analysis</ol>
+                        </ul>
+                      </p>
+                    </div>
+                    <div class="col-md-6">
+                      <img width="100%" src="assets/projects/Wegmans_post1.png">
+                    </div>
+                    <div class="col-md-6">
+                      <img width="100%" src="assets/projects/Wegmans_post2.png">
+                    </div>
+                    <div class="col-md-6">
+                      <p class="text-muted mt-3"><span style="text-decoration: underline;">Community:</span>
+                        <ul >
+                          <ol><i class="fas fa-check" style="color: lightgreen;"></i>&nbsp;Diverse loyal customers</ol>
+                          <ol><i class="fas fa-times" style="color: red;"></i>&nbsp;&nbsp;Low engagement</ol>
+                        </ul>
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <p class="text-muted mb-3"><b>Break Down the Problem:</b></p>
-                <img width="100%" src="assets/projects/PAMS_problem_breakdown.png">
-              </div>
-              
-              <div class="tab-pane fade shadow rounded bg-white p-5" id="current-performance" role="tabpanel" aria-labelledby="current-performance-tab">
-                  <h4 class="mb-3">Target Setting</h4>
-                  <p class="text-muted mb-3">
-                    <ul>
-                      <li>Check 100% of employees’ daily attendance</li>
-                      <li>Track 98% of machine downtime & corresponding reasons</li>
-                      <li>Digitize and manage 75% of data in real-time</li>
-                      <li>Generate reports in 2-3hrs upon request</li>
-                      <li>Ensure 90% of the data accuracy using the self-check procedure</li>
-                    </ul>
-                  </p>
-                  <img width="100%" src="assets/projects/PAMS_timeline.png">
+                  <p class="text-muted mb-3"><b>NUVI Analysis</b></p>
+                  <div class="row mb-3 d-flex align-items-center justify-content-center">
+                    <div class="col-md-12 text-center">
+                      <img class="mb-3" width="50%" src="assets/projects/Wegmans_Nuvi1.png">
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <p class="text-muted">Very limited virality compared to reach</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                      <img class="mb-3" width="100%" src="assets/projects/Wegmans_Nuvi2.png">
+                    </div>
+                    <div class="col-md-6 text-center">
+                      <img class="mb-3" width="100%" src="assets/projects/Wegmans_Nuvi3.png">
+                    </div>
+                    <div class="col-md-12">
+                      <ul class="text-muted">
+                        <li>Top influencers (news media) not match with target market</li>
+                        <li>Wegmans itself not in the most reach list</li>
+                        <li>Few food marekt influencers</li>
+                      </ul>
+                    </div>
+                  </div>
               </div>
               
               <div class="tab-pane fade shadow rounded bg-white p-5" id="network-design" role="tabpanel" aria-labelledby="network-design-tab">
-                <h4 class="mb-3">Root Cause Analysis</h4>
-                <p class="text-muted mb-3"><b>Narrowed-Down Root Causes (red circles in the chart below):</b></p>
-                <p class="text-muted mb-3">
-                  <ul>
-                    <li>For managers: there is a lack of data tracking and management system.</li>
-                    <li>For machine operators: the data entry process is too complicated.</li>
-                  </ul>
-                </p>
-                <p class="text-muted mb-3"><b>Significant Breakthrough:</b></p>
-                <p class="text-muted mb-3">At first, managers kept telling us there was no data and report available for him to review, so we designed customized sheets to track data and generate reports.</p>
-                <p class="text-muted mb-3">However, we were still getting pushback from <span class="red_word">machine operators</span> who were responsible for data entry.</p>
-                <p class="text-muted mb-5">After interviewing machine operators and conducting anomalous surveys, we realized that there was only <span class="red_word">one computer</span> on the whole manufacturing floor. Thus, whenever operators need to input data, they need to walk across the entire factory. This complicated process <span class="red_word">discourages operators from recording valuable data</span> for the upper-management.</p>
-                <img width="100%" src="assets/projects/PAMS_root_cause.jpg">
-              </div>
-              
-              <div class="tab-pane fade shadow rounded bg-white p-5" id="metric" role="tabpanel" aria-labelledby="metric-tab">
-                  <h4 class="mb-3">Develop Countermeasures</h4>
-                  <img class="mb-4" width="100%" src="assets/projects/PAMS_countermeasures.png">
-                  <p class="text-muted mb-3"><b>Material and Information Flow Chart (MIFC)</b> was crafted to understand the manufacturing process and support the design of data-tracking sheets.</p>
-                  <img class="mb-4" width="100%" src="assets/projects/PAMS_MIFC.png">
-              </div>
-
-              <div class="tab-pane fade shadow rounded bg-white p-5" id="risks-methods" role="tabpanel" aria-labelledby="risks-methods-tab">
-                <h4 class="mb-3">Implementation, Iteration, and Improvement</h4>
-                <p class="text-muted mb-3"><b>Implementation Process:</b></p>
-                <img class="mb-4"style="margin:0 10%" width="80%" src="assets/projects/PAMS_implementation.png">
-                <p class="text-muted mb-3"><b>Implementation Results:</b></p>
-                <p class="text-muted mb-3" style="text-decoration: underline;">For data-tracking sheets design:</p>
-                <!-- Excel Experiments Swiper -->
-                <div class="swiper-container" id="PAMS_experiments">
+                <h4 class="mb-3">Campaign Objectives and Improvements</h4>
+                <p class="text-muted mb-5"><b>Campaign Objectives</b></p>
+                <div class="row d-flex justify-content-center">
+                  <div class="col-md-4 text-center">
+                    <i style="font-size: 30px; color:rgb(98, 201, 180)" class="fas fa-comments mb-3"></i>
+                    <p class="text-muted">Increase customer engagement</p>
+                  </div>
+                  <div class="col-md-4 text-center">
+                    <i style="font-size: 30px; color: rgb(253, 95, 94);" class="fas fa-users mb-3"></i>
+                    <p class="text-muted">Target audience groups accurately</p>
+                  </div>
+                  <div class="col-md-4 text-center">
+                    <i style="font-size: 30px; color: rgb(251, 200, 47);" class="far fa-grin-squint mb-3"></i>
+                    <p class="text-muted">Generate data insights to improve customer satisfaction</p>
+                  </div>
+                </div>
+                <p class="text-muted mb-3"><b>Social Media Improvements</b></p>
+                <!-- Wegmans Ideas Swiper -->
+                <div class="swiper-container" id="Wegmans_ideas">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="assets/projects/PAMS_experiment1.jpg"></div>
-                    <div class="swiper-slide"><img src="assets/projects/PAMS_experiment2.png"></div>
-                    <div class="swiper-slide"><img src="assets/projects/PAMS_experiment3.png"></div>
+                    <div class="swiper-slide"><img src="assets/projects/Wegmans_idea1.png"></div>
+                    <div class="swiper-slide"><img src="assets/projects/Wegmans_idea2.png"></div>
+                    <div class="swiper-slide"><img src="assets/projects/Wegmans_idea3.png"></div>
+                    <div class="swiper-slide"><img src="assets/projects/Wegmans_idea4.png"></div>
                   </div>
                   <!-- Add Pagination -->
                   <div class="swiper-pagination"></div>
@@ -974,44 +931,49 @@
                   <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div>
                 </div>
-                <p class="text-muted mb-3" style="text-decoration: underline;">ERP system research:</p>
-                <p class="text-muted mb-3">
-                  <ul>
-                    <ol>1. Five companies (Microsoft Dynamics, Odoo, ERPnext, Epicor, and Syspro: California) were compared.</ol>
-                    <ol>2. Odoo was selected as the optimal ERP system for advantages below: 
-                      <ul>
-                        <li>Cloud-based, open source ERP solution</li>
-                        <dd>-- Open source => new apps constantly being developed</dd>
-                        <li>Blockchain enabled</li>
-                        <dd>-- Improved tracking and security</dd>
-                        <li>4 million users</li>
-                        <dd>-- Lots of support through forums</dd>
-                      </ul>
-                    </ol>
-                    <ol>3. Functionality proposal:
-                      <img class="mb-3 mt-3" width="100%" src="assets/projects/PAMS_odoo_function.png"> 
-                    </ol>
-                    <ol>4. Implementation plan:
-                      <ul>
-                        <li>Odoo Gold Partner Implementation team</li>
-                        <dd>-- Sales contact information is given</dd>
-                        <li>Office is 200km from Mysore</li>
-                        <dd>-- On-site implementation request</dd>
-                        <dd>-- Remote implementation assistance</dd>
-                        <li>Professional consulting service for personalized implementation</li>
-                      </ul>
-                    </ol>
-                  </ul>
-                </p>
-            </div>
+
+                <p class="text-muted mb-3"><b>Keywords Analyzing Platform Design</b></p>
+                <p class="text-muted mb-3">Objective: Analyze social media data to improve customer satisfaction</p>
+                <img class="mb-3" width="100%" src="assets/projects/Wegmans_tool1.png">
+                <ul class="mb-3">
+                  <li>Hashtag <i>#WegmansService</i> to collect opinions, complaints, or suggestions</li>
+                  <li>Python Natural Language Processing to conduct keywords & sentiment analysis</li>
+                </ul>
+                <img class="mb-3" width="100%" src="assets/projects/Wegmans_tool2.png">
+                <ul class="text-muted">
+                  <li>Dashboards for leaders</li>
+                  <dd>-- Monitor live customer feedback</dd>
+                  <dd>-- Make responsive adjustments</dd>
+                  <dd>-- Brand management & Provide insights to executive board</dd>
+                </ul>
+              </div>
+              
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="metric-risk" role="tabpanel" aria-labelledby="metric-risk-tab">
+                  <h4 class="mb-3">Evaluation Metrics and Implementation Risks</h4>
+                  <p class="text-muted mb-3"><b>Campaign Result Measurements</b></p>
+                  <img class="mb-4" width="100%" src="assets/projects/Wegmans_metrics.png">
+                  <p class="text-muted mb-3"><b>Implementation Risks and Mitigating Methods</b></p>
+                  <img class="mb-4" width="100%" src="assets/projects/Wegmans_risks.png">
+              </div>
 
           </div>
       </div>
     </div>
 
-
-
-
+    <!-- project reflection -->
+    <div class="row mt-5 d-flex align-items-center justify-content-center">
+      <div class="col-md-12 text-center">
+        <h2 class="mb-4 sub_title">Reflection</h2>
+      </div>
+    </div>
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-md-9 reflection_text">
+        Make sure to build two-way communication channels with consumers. Besides enhancing engagement, it is also valuable to understand consumers’ sentiments and analyze their reactions.
+      </div>
+      <div class="col-md-3 text-center">
+        <img width="100%" src="assets/projects/reflection.png">
+      </div>
+    </div>
 
   </div>
 </section>

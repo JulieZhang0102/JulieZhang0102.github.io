@@ -131,33 +131,15 @@ header {
     color: var(--banner_green);
 }
 
-#Mindpeace_tests .swiper-wrapper {
+.swiper-wrapper {
     padding-bottom: 50px;
 }
 
-#Mindpeace_tests .swiper-wrapper .swiper-slide img {
+.swiper-wrapper .swiper-slide img {
     width: 90%;
-    margin: 0 3.5%;
-}
-
-#Mindpeace_development .swiper-wrapper {
-    padding-bottom: 50px;
-}
-
-#Mindpeace_development .swiper-wrapper .swiper-slide img {
-    width: 90%;
-    margin: 0 4.5%;
+    margin: 0 4%;
 }
 
 .tab-content h4 {
     text-align: center;
-}
-
-#PAMS_experiments .swiper-wrapper {
-    padding-bottom: 50px;
-}
-
-#PAMS_experiments .swiper-wrapper .swiper-slide img {
-    width: 90%;
-    margin: 0 5%;
 }
