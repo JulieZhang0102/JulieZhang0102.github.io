@@ -121,6 +121,10 @@ section:first-of-type{
   opacity: 100%;
 }
 
+.navbar .navbar-nav .fa-star {
+  font-size: 15px;
+}
+
 .fa-bars {
   color: var(--banner_pink);
   font-size: 120%;
