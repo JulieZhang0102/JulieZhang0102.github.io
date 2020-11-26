@@ -28,30 +28,6 @@
 
   $(document).ready(function(){
 
-    // Initialize Swiper for project list display
-    var swiper_project_list = new Swiper('#project_list_swiper', {
-        effect: 'coverflow',
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        initialSlide: 1,
-        autoplay: { delay: 4500, disableOnInteraction: false,},
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
   });
 
 </script>
@@ -101,40 +77,57 @@
     </div>
   </nav>
 
-  <!-- 3D display projects list -->
+  <!-- projects list -->
   <header class="container-fluid back_area">
       <div class="row d-flex align-items-center justify-content-center">
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-right">
             <h1 class="my_work">Featured Projects</h1>
             <img class="top_girl" src="assets/work1.png">
         </div>
         <div class="col-md-8 text-center">
-            <!-- Swiper -->
-            <div class="swiper-container" id="project_list_swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <a href="#starBook"><img class="img-fluid" src="assets/projects/starBook.jpg">
-                      <div class="caption"><b>starBook Web APP Development</b></div></a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#Mindpeace"><img class="img-fluid" src="assets/projects/Mindpeace.png">
-                      <div class="caption"><b>Mindpeace Mobile APP Design</b></div></a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#PAMS"><img class="img-fluid" src="assets/projects/PAMS.jpg">
-                      <div class="caption"><b>Lean Operations Consulting</b></div></a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#Wegmans"><img class="img-fluid" src="assets/projects/Wegmans.png">
-                      <div class="caption"><b>Wegmans Social Media Campaign</b></div></a>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
+          <ul id="hexGrid">
+            <li class="hex">
+              <div class="hexIn">
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#starBook">
+                  <img src="assets/projects/starBook.jpg">
+                  <h1>starBook</h1>
+                  <p>starBook Web APP Development</p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#Mindpeace">
+                  <img src="assets/projects/Mindpeace.png">
+                  <h1>Mindpeace</h1>
+                  <p>Mindpeace Mobile APP Design</p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#PAMS">
+                  <img src="assets/projects/PAMS_cover.jpg">
+                  <h1>Consulting</h1>
+                  <p>Lean Operations Consulting</p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#Wegmans">
+                  <img src="assets/projects/Wegmans_cover.jpg">
+                  <h1>Wegmans</h1>
+                  <p>Wegmans Social Media Campaign</p>
+                </a>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
   </header>
