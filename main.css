@@ -16,15 +16,10 @@ body {
     font-size: 18px;
     color: #666666;
     text-align: left;
-  }
-
-section {
-  opacity: 0;
-  scroll-margin-top: 2em;
 }
 
-section:first-of-type{
-  opacity: 1;
+section {
+  scroll-margin-top: 2em;
 }
 
 .no-js #loader { display: none;  }
