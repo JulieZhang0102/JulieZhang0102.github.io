@@ -25,11 +25,7 @@
 </head>
 
 <script>
-
-  $(document).ready(function(){
-
-  });
-
+  
   function show_project_detail(project_name) {
     var all_projects = document.getElementsByTagName('section')
     var chosen_project = document.getElementById(project_name)
@@ -179,7 +175,7 @@
             <b>Role:</b> Product Manager and Web APP Developer<br>
             <b>Industry:</b> Non-Profit Organization<br>
             <b>Tech Tool:</b> Python Django<br>
-            <b>Project Length:</b> 3-month development & up to date maintenance<br>
+            <b>Project Length:</b> 2-month development & up to date maintenance<br>
             <b>Client:</b> International Chinese Reading Association (ICRA)<br>
             <b>Link:</b> <a href="https://www.chinesestorytime.org/en/starbook/" target="_blank">starBook Web APP Link</a><br>
           </p>
@@ -423,7 +419,7 @@
                   <div class="row mb-3 d-flex align-items-center justify-content-center">
                     <div class="col-md-6 text-center"><img width="100%" src="assets/projects/Mindpeace.png"></div>
                     <div class="col-md-6">
-                      <p class="text-muted" style="text-indent: 30px;">A mobile APP allows people to relieve their stress by sharing thoughts and express concerns. The app will provide stress management resources and create a secure & private environment for people to mitigate anxiety.</p>
+                      <p class="text-muted" style="text-indent: 30px;">A mobile APP allows people to relieve their stress by sharing thoughts and expressing concerns. The app provides stress management resources and creates a secure & private place for people to mitigate anxiety.</p>
                     </div>
                   </div>
                   <p class="text-muted mb-4"><b>Service:</b></p>
@@ -463,10 +459,9 @@
                     </div>
                     <div class="col-md-9 text-muted">
                       <ul>
-                        <li>Max is a recent college graduate working an entry-level accounting job in a huge company.</li>
-                        <li>Working seems to be his whole life, and even worse he is single.</li>
-                        <li>He has few friends and a very minuscule and uninteresting social life.</li>
-                        <li>This routine has impacted his mental health very negatively. He is not motivated to do anything and cannot stay concentrated.</li>
+                        <li>Max is a recent college graduate working as an entry-level accountant in a big company.</li>
+                        <li>Working seems to be his whole life. He has few friends and a very minuscule and uninteresting social life.</li>
+                        <li>This routine has negative impacts on his mental health. He cannot find motivation and cannot stay concentrated.</li>
                       </ul>
                     </div>
                   </div>
@@ -490,10 +485,18 @@
                     <div class="swiper-button-prev"></div>
                   </div>
                   <p class="text-muted mb-3"><b>Feedback & Improvements:</b><br>
-                    <ul>
-                      <li>People thought the APP was a convenient platform for stress relief.</li>
-                      <li>The APP should provide more varieties of stress management resources.</li>
-                      <li>The APP should organize special stress relief events.</li>
+                    <ul class="text-muted">
+                      <li>Positive Feedback: 
+                        <ul>
+                          <li>A convenient platform for stress relief</li>
+                        </ul>
+                      </li>
+                      <li>Improvements: 
+                        <ul>
+                          <li>Provide more varieties of stress management resources</li>
+                          <li>Organize special stress relief events</li>
+                        </ul>
+                      </li>
                     </ul>
                   </p>
                 </div>
@@ -515,7 +518,7 @@
                     </div>
                     <p class="text-muted mt-3 mb-3"><b>Potential Regulatory Constraints:</b></p>
                     <p class="text-muted mb-3">
-                      <ul>
+                      <ul class="text-muted">
                         <li>Forum and one-on-one chat information must be secured on the server and keep private.</li>
                         <li>Mental health professionals must be qualified to provide consulting services according to state regulations.</li>
                       </ul>
@@ -536,20 +539,31 @@
                     </div>
                   </div>
                   <p class="text-muted mb-3"><b>Major UX Improvement:</b></p>
-                  <p class="text-muted mb-3"><span style="text-decoration: underline;">Original Menu Design:</span> Unless the menu icon is clicked, the menu bar would be hidden off the screen.</p>
-                  <p class="text-muted mb-3"><span style="text-decoration: underline;">Feedback:</span> The first round of testers reported that such a design made it hard to switch between different views.</p>
-                  <p class="text-muted mb-3"><span style="text-decoration: underline;">Improvement:</span> Four view tabs for home, forum, recreation, and therapy are added at the bottom of the screen for the convenient view switch.</p>
+                  <img width="100%" src="assets/projects/Mindpeace_UI_Improve.jpg"></a>
                 </div>
                 
                 <div class="tab-pane fade shadow rounded bg-white p-5" id="mobile-development" role="tabpanel" aria-labelledby="mobile-development-tab">
                     <h4 class="mb-3">Development Strategies</h4>
                     <p class="text-muted mb-3"><b>Architecture:</b> Cross-Platform</p>
-                    <p class="text-muted mb-3">
-                      <ul>
-                        <li>Web: Provide APP marketing information, APP download links, and stress management packages such as Yoga video and meditation guide.</li>
-                        <li>Mobile APP: Access to the anonymous public forum, nearby events, live streaming stress relief resources, and one-on-one consultation service.</li>
-                      </ul>
-                    </p>
+                    <div class="row text-muted mb-3">
+                      <div class="col-md-6">
+                        <p>Web:</p>
+                        <ul>
+                          <li>APP marketing information</li>
+                          <li>APP download links</li>
+                          <li>Stress management packages such as Yoga video and meditation guide</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <p>Mobile APP:</p>
+                        <ul>
+                          <li>Access to the anonymous public forum</li>
+                          <li>Nearby events</li>
+                          <li>Live streaming stress relief resources</li>
+                          <li>One-on-one consultation service</li>
+                        </ul>
+                      </div>
+                    </div>
                     <p class="text-muted mb-3"><b>Operating System and Store:</b> Considering the development cost, the APP will only be available on the Apple Store (iOS) at the first stage.</p>
                     <p class="text-muted mb-3"><b>Development Plan:</b></p>
                     <!-- Development Swiper -->
@@ -571,12 +585,11 @@
                   <h4 class="mb-3">Marketing Strategies & Growth Projection</h4>
                   <p class="text-muted mb-3"><b>Marketing Strategies:</b></p>
                   <p class="text-muted mb-3">
-                    <ul>
+                    <ul class="text-muted">
                       <li>App-Store Optimization: Select strategic key-words for search engine optimization</li>
-                      <li>Reviewing Rewards: Offer discounted price services for users who review the APP</li>
-                      <li>App Referrals: Design rewards program for referrals that lead to downloads</li>
-                      <li>Blogs: Create an alternative medium  that attracts followers to the APP</li>
-                      <li>Social Media Campaigns: Partner with popular social media influencers in the target market to promote the APP</li>
+                      <li>Rewards Program: Rewards given if review the APP and/or refer someone to download the APP</li>
+                      <li>Blogs: An alternative medium to attract followers to the APP</li>
+                      <li>Social Media Campaigns: Partner with influencers in the target market to promote the APP</li>
                     </ul>
                   </p>
                   <p class="text-muted mb-3"><b>Growth Projection:</b></p>
@@ -590,6 +603,7 @@
                       <img width="80%" src="assets/projects/Mindpeace_growth.png">
                     </div>
                   </div>
+                  <p class="text-muted mb-3" style="text-align: center;"><b>Breakeven at Year 3</b></p>
               </div>
             </div>
         </div>
@@ -603,7 +617,7 @@
       </div>
       <div class="row d-flex align-items-center justify-content-center">
         <div class="col-md-9 reflection_text">
-          End users must be engaged throughout the design and development phases. Usability testing is vital for receiving instant feedback and improving user experience.
+          Be sure to engage with end users throughout the design and development phases. Usability testing is vital for receiving instant feedback and improving user experience.
         </div>
         <div class="col-md-3 text-center">
           <img width="100%" src="assets/projects/reflection.png">
@@ -671,10 +685,6 @@
                     <i class="fas fa-exclamation mr-2"></i>
                     <span class="font-weight-bold small text-uppercase">Problem</span></a>
 
-                <a class="nav-link mb-3 p-3 shadow" id="target-tab" data-toggle="pill" href="#target" role="tab" aria-controls="target" aria-selected="false">
-                    <i class="far fa-flag mr-2"></i>
-                    <span class="font-weight-bold small text-uppercase">Targets</span></a>
-
                 <a class="nav-link mb-3 p-3 shadow" id="root-cause-tab" data-toggle="pill" href="#root-cause" role="tab" aria-controls="root-cause" aria-selected="false">
                     <i class="fas fa-search-plus mr-2"></i>
                     <span class="font-weight-bold small text-uppercase">Root Causes</span></a>
@@ -708,35 +718,28 @@
                   </div>
                   <p class="text-muted mb-3"><b>Break Down the Problem:</b></p>
                   <img width="100%" src="assets/projects/PAMS_problem_breakdown.png">
-                </div>
-                
-                <div class="tab-pane fade shadow rounded bg-white p-5" id="target" role="tabpanel" aria-labelledby="target-tab">
-                    <h4 class="mb-3">Target Setting</h4>
-                    <p class="text-muted mb-3">
-                      <ul>
-                        <li>Check 100% of employees’ daily attendance</li>
-                        <li>Track 98% of machine downtime & corresponding reasons</li>
-                        <li>Digitize and manage 75% of data in real-time</li>
-                        <li>Generate reports in 2-3hrs upon request</li>
-                        <li>Ensure 90% of the data accuracy using the self-check procedure</li>
-                      </ul>
-                    </p>
-                    <img width="100%" src="assets/projects/PAMS_timeline.png">
+                  <p class="text-muted mb-3"><b>Target Setting:</b></p>
+                  <p class="text-muted mb-3">
+                    <ul class="text-muted">
+                      <li>Check 100% of employees’ daily attendance</li>
+                      <li>Track 98% of machine downtime & corresponding reasons</li>
+                      <li>Digitize and manage 75% of data in real-time</li>
+                      <li>Generate reports in 2-3hrs upon request</li>
+                      <li>Ensure 90% of the data accuracy using the self-check procedure</li>
+                    </ul>
+                  </p>
+                  <img width="100%" src="assets/projects/PAMS_timeline.png">
                 </div>
                 
                 <div class="tab-pane fade shadow rounded bg-white p-5" id="root-cause" role="tabpanel" aria-labelledby="root-cause-tab">
                   <h4 class="mb-3">Root Cause Analysis</h4>
-                  <p class="text-muted mb-3"><b>Narrowed-Down Root Causes (red circles in the chart below):</b></p>
-                  <p class="text-muted mb-3">
-                    <ul>
-                      <li>For managers: there is a lack of data tracking and management system.</li>
-                      <li>For machine operators: the data entry process is too complicated.</li>
-                    </ul>
-                  </p>
+                  <p class="text-muted mb-3"><b>Managers: </b>
+                    <ul class="text-muted"><ol>A lack of data tracking and management system</ol></ul></p>
+                  <p class="text-muted mb-3"><b>Machine Operators: </b>
+                    <ul class="text-muted"><ol>Complicated data entry process</ol></ul></p>
                   <p class="text-muted mb-3"><b>Significant Breakthrough:</b></p>
-                  <p class="text-muted mb-3">At first, managers kept telling us there was no data and report available for him to review, so we designed customized sheets to track data and generate reports.</p>
-                  <p class="text-muted mb-3">However, we were still getting pushback from <span class="red_word">machine operators</span> who were responsible for data entry.</p>
-                  <p class="text-muted mb-5">After interviewing machine operators and conducting anomalous surveys, we realized that there was only <span class="red_word">one computer</span> on the whole manufacturing floor. Thus, whenever operators need to input data, they need to walk across the entire factory. This complicated process <span class="red_word">discourages operators from recording valuable data</span> for the upper-management.</p>
+                  <img width="100%" src="assets/projects/PAMS_root_break.jpg">
+                  <p class="text-muted mb-3"><b>Five Why Analysis:</b></p>
                   <img width="100%" src="assets/projects/PAMS_root_cause.jpg">
                 </div>
                 
@@ -768,7 +771,7 @@
                   </div>
                   <p class="text-muted mb-3" style="text-decoration: underline;">ERP system research:</p>
                   <p class="text-muted mb-3">
-                    <ul>
+                    <ul class="text-muted">
                       <ol>1. Five companies (Microsoft Dynamics, Odoo, ERPnext, Epicor, and Syspro: California) were compared.</ol>
                       <ol>2. Odoo was selected as the optimal ERP system for advantages below: 
                         <ul>
@@ -907,19 +910,19 @@
                     <div class="row mb-4 d-flex align-items-center justify-content-center">
                       <div class="col-md-6">
                         <p class="text-muted"><span style="text-decoration: underline;">Content:</span>
-                          <ul>
+                          <ul class="text-muted">
                             <ol><i class="fas fa-check" style="color: lightgreen;"></i>&nbsp;High quality pictures</ol>
                             <ol><i class="fas fa-times" style="color: red;"></i>&nbsp;&nbsp;No value-added content</ol>
                           </ul>
                         </p>
                         <p class="text-muted"><span style="text-decoration: underline;">Collaborative Platform:</span>
-                          <ul >
+                          <ul class="text-muted">
                             <ol><i class="fas fa-times" style="color: red;"></i>&nbsp;&nbsp;Weak cross platform linkage</ol>
                             <ol><i class="fas fa-times" style="color: red;"></i>&nbsp;&nbsp;No internal & external stakeholders connection</ol>
                           </ul>
                         </p>
                         <p class="text-muted"><span style="text-decoration: underline;">Listen and Learn:</span>
-                          <ul >
+                          <ul class="text-muted">
                             <ol><i class="fas fa-times" style="color: red;"></i>&nbsp;&nbsp;Only one-way communication from Wegmans</ol>
                             <ol><i class="fas fa-times" style="color: red;"></i>&nbsp;&nbsp;Low interactions, no insight analysis</ol>
                           </ul>
@@ -933,7 +936,7 @@
                       </div>
                       <div class="col-md-6">
                         <p class="text-muted mt-3"><span style="text-decoration: underline;">Community:</span>
-                          <ul >
+                          <ul class="text-muted">
                             <ol><i class="fas fa-check" style="color: lightgreen;"></i>&nbsp;Diverse loyal customers</ol>
                             <ol><i class="fas fa-times" style="color: red;"></i>&nbsp;&nbsp;Low engagement</ol>
                           </ul>
@@ -956,9 +959,9 @@
                       </div>
                       <div class="col-md-12">
                         <ul class="text-muted">
-                          <li>Top influencers (news media) not match with target market</li>
-                          <li>Wegmans itself not in the most reach list</li>
-                          <li>Few food marekt influencers</li>
+                          <li>Top influencers (news media) <span style="color: red;">NOT</span> match with target market</li>
+                          <li>Wegmans itself <span style="color: red;">NOT</span> in the most reach list</li>
+                          <li><span style="color: red;">FEW</span> food marekt influencers</li>
                         </ul>
                       </div>
                     </div>
@@ -1000,25 +1003,53 @@
                   <p class="text-muted mb-3"><b>Keywords Analyzing Platform Design</b></p>
                   <p class="text-muted mb-3">Objective: Analyze social media data to improve customer satisfaction</p>
                   <img class="mb-3" width="100%" src="assets/projects/Wegmans_tool1.png">
-                  <ul class="mb-3">
-                    <li>Hashtag <i>#WegmansService</i> to collect opinions, complaints, or suggestions</li>
-                    <li>Python Natural Language Processing to conduct keywords & sentiment analysis</li>
+                  <ul class="mb-3 text-muted">
+                    <li>Hashtag <span style="color: red;"><i>#WegmansService</i></span> to collect opinions, complaints, or suggestions</li>
+                    <li><span style="color: red;">Python Natural Language Processing</span> to conduct keywords & sentiment analysis</li>
                   </ul>
                   <img class="mb-3" width="100%" src="assets/projects/Wegmans_tool2.png">
                   <ul class="text-muted">
-                    <li>Dashboards for leaders</li>
+                    <li>Benefits</li>
                     <dd>-- Monitor live customer feedback</dd>
-                    <dd>-- Make responsive adjustments</dd>
-                    <dd>-- Brand management & Provide insights to executive board</dd>
+                    <dd>-- Make responsive adjustments on feedback</dd>
+                    <dd>-- Provide insights to executive board for brand management</dd>
                   </ul>
                 </div>
                 
                 <div class="tab-pane fade shadow rounded bg-white p-5" id="metric-risk" role="tabpanel" aria-labelledby="metric-risk-tab">
                     <h4 class="mb-3">Evaluation Metrics and Implementation Risks</h4>
                     <p class="text-muted mb-3"><b>Campaign Result Measurements</b></p>
-                    <img class="mb-4" width="100%" src="assets/projects/Wegmans_metrics.png">
-                    <p class="text-muted mb-3"><b>Implementation Risks and Mitigating Methods</b></p>
-                    <img class="mb-4" width="100%" src="assets/projects/Wegmans_risks.png">
+                    <div class="row mb-3 d-flex align-items-center justify-content-center">
+                      <div class="col-md-7">
+                        <p class="text-muted mb-2">Quantitative:</p>
+                        <ul class="mb-3 text-muted">
+                          <li>New followers/likes/comments/shares</li>
+                          <li>Volume of new contents</li>
+                          <li>Website traffic monitor by Google Analytics</li>
+                          <li>Traffic leads referred from social media activities</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-5 text-left">
+                        <img width="100%" src="assets/projects/Wegmans_quantitative.jpg">
+                      </div>
+                    </div>
+                    <div class="row mb-4 d-flex align-items-center justify-content-center">
+                      <div class="col-md-7 text-center">
+                        <img width="60%" src="assets/projects/Wegmans_qualitative.jpg">
+                      </div>
+                      <div class="col-md-5">
+                        <p class="text-muted mb-2">Qualitative:</p>
+                        <ul class="mb-3 text-muted">
+                          <li>Sentiment Analysis</li>
+                          <li>In-store interviews</li>
+                          <li>Feedback surveys</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <p class="text-muted mb-3"><b>Implementation Risks and Solutions</b></p>
+                    <div class="row mb-4">
+                      <div class="col-md-12 text-center"><img width="80%" src="assets/projects/Wegmans_risks.jpg"></div>
+                    </div>
                 </div>
 
             </div>
@@ -1033,7 +1064,7 @@
       </div>
       <div class="row d-flex align-items-center justify-content-center">
         <div class="col-md-9 reflection_text">
-          Make sure to build two-way communication channels with consumers. Besides enhancing engagement, it is also valuable to understand consumers’ sentiments and analyze their reactions.
+          Make sure to build two-way communication channels. Besides enhancing engagement, understanding consumers’ sentiments and analyzing their reactions are also valuable.
         </div>
         <div class="col-md-3 text-center">
           <img width="100%" src="assets/projects/reflection.png">
