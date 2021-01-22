@@ -135,16 +135,23 @@
     text-decoration: none;
     color: #333
   }
+
+  .youtube_video {
+    border-bottom: 3px solid var(--banner_green);
+    border-right: 3px solid var(--banner_green);
+    border-top: 3px solid var(--banner_pink);
+    border-left: 3px solid var(--banner_pink);
+  }
   
   .feature_name_green {
     font-family: 'Barrio', cursive;
-    font-size: 40px;
+    font-size: 32px;
     color: var(--banner_green);
   }
   
   .feature_name_pink {
     font-family: 'Barrio', cursive;
-    font-size: 40px;
+    font-size: 32px;
     color: var(--banner_pink);
   }
   
