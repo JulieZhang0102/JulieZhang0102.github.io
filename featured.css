@@ -281,6 +281,11 @@
     color: var(--banner_green);
 }
 
+.swiper-container {
+    width: 50%;
+    height: 50%;
+}
+
 .swiper-wrapper {
     padding-bottom: 50px;
 }
