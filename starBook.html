@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3H9HJCJNWB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3H9HJCJNWB', {'page_title' : 'starBook'});
+  </script>
+  <title>Jiashu Zhang</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/188a1ecbd0.js" crossorigin="anonymous" async></script>
+  <script src="main.js" async></script>
+  <link rel="stylesheet" type="text/css" href="project.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/logo.ico"/>
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href='https://fonts.googleapis.com/css?family=Big Shoulders Stencil Text' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--Loading Page-->
+  <div class="se-pre-con">
+    <div class="loader_image">
+      <img src="assets/logo.png">
+      <p>Loading ...</p>
+    </div>
+  </div>
+
+  <!--Navigation bar-->
+  <nav class="navbar navbar-expand-sm sticky-top bg-custom">
+    <div class="container">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/logo.png" alt="logo" style="width:35px; padding-bottom: 3px;">
+        </a>
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/logo_name.png" alt="logo_name" style="height:30px; padding-bottom: 5px;">
+        </a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon d-flex align-items-center justify-content-center"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item ml-2">
+            <a class="nav-link" href="index.html#my_projects">Projects</a>
+            </li>
+            <li class="nav-item ml-2">
+              <a class="nav-link" href="index.html#about_me">About Me</a>
+            </li>
+            <li class="nav-item ml-2">
+              <a type="button" href="assets/Zhang-Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary custom-btn mr-3">Resume</a>
+            </li>
+            <span class="nav-indicator"></span>
+        </ul>
+        </div>
+    </div>
+  </nav>
+
+  <!-- back to top button -->
+  <button onclick="topFunction()" id="back_to_top" title="Go to top">Top</button>
+
+<!-- Page Content -->
+<section id="starBook" style="display: block;">
+  <div class="container">
+  <div class="row">
+    <!-- Porject Content -->
+    <div class="col-md-12 py-5">
+    
+      <div class="row mt-4 d-flex align-items-center justify-content-center">
+        <div class="col-md-12 text-center">
+          <h1 class="project_title">starBook Web APP Development</h1>
+          <hr class="mt-4 project_title_line">
+          <h4 class="mt-4 project_highlight"><span class="project_title_slash">||</span> User-centered web application management project <span class="project_title_slash">||</span></h4>
+        </div>
+      </div>
+
+      <!-- basic info -->
+      <div class="row mt-5 d-flex align-items-center justify-content-center">
+        <div class="col-md-5 text-center">
+          <img width="100%" src="assets/projects/starBook_1.gif">
+        </div>
+        <div class="col-md-6 offset-1">
+          <h2 class="mb-3 sub_title">Basic Information</h2>
+          <p class="basic_info_body">
+            <b>Role:</b> Full Stack Developer<br>
+            <b>Industry:</b> Non-Profit Organization<br>
+            <b>Tech Tool:</b> Python Django<br>
+            <b>Project Length:</b> 2-month development & up to date maintenance<br>
+            <b>Client:</b> International Chinese Reading Association (ICRA)<br>
+            <b>Link:</b> <a href="https://www.chinesestorytime.org/en/starbook/" target="_blank">starBook Web APP Link</a><br>
+          </p>
+        </div> 
+      </div>
+
+      <!-- project story -->
+      <div class="row mt-5">
+        <div class="col-md-3">
+            <!-- Tabs nav -->
+            <div class="nav flex-column nav-pills nav-pills-custom" id="v-starBook-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link mb-3 p-3 shadow active" id="client-demands-tab" data-toggle="pill" href="#client-demands" role="tab" aria-controls="client-demands" aria-selected="true">
+                    <i class="far fa-user-circle mr-2"></i>
+                    <span class="font-weight-bold small text-uppercase">Client Demands</span></a>
+
+                <a class="nav-link mb-3 p-3 shadow" id="target-users-tab" data-toggle="pill" href="#target-users" role="tab" aria-controls="target-users" aria-selected="false">
+                    <i class="fas fa-users mr-2"></i>
+                    <span class="font-weight-bold small text-uppercase">Target Users</span></a>
+
+                <a class="nav-link mb-3 p-3 shadow" id="wireframe-tab" data-toggle="pill" href="#wireframe" role="tab" aria-controls="wireframe" aria-selected="false">
+                    <i class="fas fa-star mr-2"></i>
+                    <span class="font-weight-bold small text-uppercase">Wireframe</span></a>
+
+                <a class="nav-link mb-3 p-3 shadow" id="development-tab" data-toggle="pill" href="#development" role="tab" aria-controls="development" aria-selected="false">
+                    <i class="fas fa-desktop mr-2"></i>
+                    <span class="font-weight-bold small text-uppercase">Development</span></a>
+                <a class="nav-link mb-3 p-3 shadow" id="launch-tab" data-toggle="pill" href="#launch" role="tab" aria-controls="launch" aria-selected="false">
+                  <i class="fas fa-check mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Launch</span></a>
+                <a class="nav-link mb-3 p-3 shadow" id="expansion-tab" data-toggle="pill" href="#expansion" role="tab" aria-controls="expansion" aria-selected="false">
+                  <i class="far fa-thumbs-up mr-2"></i>
+                  <span class="font-weight-bold small text-uppercase">Expansion</span></a>
+                </div>
+        </div>
+
+        <div class="col-md-8">
+            <!-- Tabs content -->
+            <div class="tab-content" id="v-starBook-tabContent">
+                <div class="tab-pane fade shadow rounded bg-white show active p-5" id="client-demands" role="tabpanel" aria-labelledby="client-demands-tab">
+                  <h4 class="mb-3">Understanding Client's Demands and Requirements</h4>
+                  <p class="font-italic text-muted mb-3">Besides carefully listening to my client, I worked with my client to envision the product from random ideas to a coherent application program with specific goals.</p>
+                  <p class="text-muted mb-3"><b>Main Challenges:</b>
+                    <ul class="text-muted">
+                      <ol>1. The client did not have a clear vision for the project.</ol>
+                      <ol>2. The client was not familiar with Web APP development.</ol>
+                    </ul>
+                  </p>
+                  <p class="text-muted mb-3"><b>Strategy:</b>
+                    <ul class="text-muted">
+                      <ol>1. Through conversations with different stakeholders, I discussed their needs, sorted out their ideas, and transformed them into effective product goals.</ol>
+                      <ol>2. I researched similar products or prototypes to visualize thoughts and clarify any confusion.</ol>
+                      <ol>3. The key points were to create flexibility for stakeholders to think and propose new thoughts.</ol>
+                    </ul>
+                  </p>
+                  <p class="text-muted mb-4"><b>Deliverable:</b> A project proposal details the project vision, project goal, implementation plan, potential risks, and communication plan.</p>
+                  <img width="100%" src="assets/projects/starBook_proposal.png">
+                </div>
+                
+                <div class="tab-pane fade shadow rounded bg-white p-5" id="target-users" role="tabpanel" aria-labelledby="target-users-tab">
+                    <h4 class="mb-3">Target Users' Analysis and Web APP Flowchart Design</h4>
+                    <p class="font-italic text-muted mb-3">The Web APP is designed for two types of users, program participating parents and program managers. Two basic personas are created below.</p>
+                    <div class="row d-flex align-items-center justify-content-center">
+                      <div class="col-md-2 text-center"><img class="mb-3" width="80%" src="assets/projects/starBook_personas_1.png"></div>
+                      <div class="col-md-10 mx-atuo">
+                        <p class="text-muted mb-3" style="font-size: 16px;"><b>Lucy</b>, 35 years old, a mother of two kids whose ages are 3 and 5. She wants to borrow or buy some Chinese children’s books for her kids but does not know which libraries to go to or what books are recommended. She participates in the starBook program and wants to get some related book information on the program Web APP. At the same time, she could also recommend any book to the program and comment on existing books.</p>
+                      </div>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-center">
+                      <div class="col-md-2 text-center"><img class="mb-3" width="80%" src="assets/projects/starBook_personas_2.png"></div>
+                      <div class="col-md-10 mx-atuo">
+                        <p class="text-muted mb-3" style="font-size: 16px;"><b>Tim</b>, 28 years old, an ICRA volunteer for the starBook program. He needs to use the program Web APP to manage the book collection list. He has his administration account and can upload, download, modify, and delete any book record in the administration interface.</p>
+                      </div>
+                    </div>
+                    <p class="text-muted"><b>Deliverable:</b> A flowchart maps the book recommendation or comment process.</p>
+                    <img width="90%" src="assets/projects/starBook_flowchart.png">
+                </div>
+                
+                <div class="tab-pane fade shadow rounded bg-white p-5" id="wireframe" role="tabpanel" aria-labelledby="wireframe-tab">
+                  <h4 class="mb-3">Web APP Wireframe Design</h4>
+                  <p class="font-italic text-muted mb-3">To better visualize the Web APP and discuss the design with my client, I sketched main page wireframes and revised them during meetings.</p>
+                  <p class="text-muted mb-3"><b>Strategy:</b> I sketched wireframes for my client to make instant changes during our conversations. Thus, we would not waste time making changes to fancy mockup tools.</p>
+                  <p class="text-muted"><b>Deliverable:</b> Final sketch wireframes illustrate structures of the program home page and book collection page.</p>
+                  <div class="text-center">
+                    <img width="45%" src="assets/projects/starBook_wireframe_1.jpg">
+                    <img width="45%" src="assets/projects/starBook_wireframe_2.jpg">
+                  </div>
+                </div>
+                
+                <div class="tab-pane fade shadow rounded bg-white p-5" id="development" role="tabpanel" aria-labelledby="development-tab">
+                    <h4 class="mb-3">Web APP Development and Weekly Iteration</h4>
+                    <p class="font-italic text-muted mb-3">I applied the Agile methodology to better interact with my client and improve the project flexibility to changes.</p>
+                    <p class="text-muted mb-3"><b>Strategy:</b>
+                      <ul class="text-muted">
+                        <ol>1. Through iteration meetings, I updated development progress, received feedback from my client, and made improvements spontaneously in a weekly cycle.</ol>
+                        <ol>2. I frequently revisited the product goals with my client to make sure the project is on the right track fulfilling the product’s business value.</ol>
+                      </ul>
+                    </p>
+                    <p class="text-muted mb-3"><b>Significant Improvement:</b> Incorporated batch data import feature simplifies the data entry process for program managers.</p>
+                    <img width="90%" src="assets/projects/starBook_django.png">
+                </div>
+
+                <div class="tab-pane fade shadow rounded bg-white p-5" id="launch" role="tabpanel" aria-labelledby="launch-tab">
+                  <h4 class="mb-3">Web APP Testing and First Launch</h4>
+                  <p class="font-italic text-muted mb-3">Both internal testing and external feedback collection were implemented.</p>
+                  <p class="text-muted mb-3"><b>Internal Testing:</b> The Web APP was firstly tested by program managers to test functionalities and fix bugs.</p>
+                  <p class="text-muted mb-3"><b>External Feedback Collection:</b> The Web APP was then launched to collect user experience feedback from participating parents (public users).</p>
+                  <p class="text-muted mb-3"><b>Significant Improvement:</b> Integrated Google Books API searches and auto-fills book information for parents, which reduces parents’ workload and encourages them to recommend books through Web APP.</p>
+                  <img width="100%" src="assets/projects/starBook_2.gif">
+              </div>
+
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="expansion" role="tabpanel" aria-labelledby="expansion-tab">
+                <h4 class="mb-3">Web APP Maintenance and Expansion</h4>
+                <p class="font-italic text-muted mb-3">As more feedback is collected, maintenance is scheduled every two months.</p>
+                <p class="text-muted mb-3">Thanks to the positive reaction from users, my client decided to expand the Web APP to be its organization website. I will be responsible for designing more features to continue providing valuable information to the target audience.</p>
+                <img width="100%" src="assets/projects/starBook_website.gif">
+              </div>
+
+            </div>
+        </div>
+      </div>
+
+      <!-- project reflection -->
+      <div class="row mt-5 d-flex align-items-center justify-content-center">
+        <div class="col-md-12 text-center">
+          <h2 class="mb-4 sub_title">Reflection</h2>
+        </div>
+      </div>
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-9 reflection_text">
+          In reality, clients do not come with well-structured demands. It is critical for me, as a product manager, to help my client envision the product through conversations and prototypes.
+        </div>
+        <div class="col-md-3 text-center">
+          <img width="100%" src="assets/projects/reflection.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<footer class="py-3 bg-dark text-white-50">
+  <div class="container text-center">
+    <small>Copyright &copy; 2022 Jiashu Zhang All Right Reserved</small>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -27,7 +27,126 @@
   min-height: 500px;
   width: 101vw;
   overflow: hidden;
+}
+
+
+.intro_text {
+  font-family: 'Allerta Stencil';
+  font-size: calc(50% + 1vw + 1vh);
+  color: white;
+  text-align: left;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+header .btn-primary.custom-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40vw;
+  font-size: 30px;
+  border-width: 2px;
+  background-color: rgba(98, 201, 180, 0.8); 
+  border: none; 
+  transition: padding 250ms;
+  color: white;
+  box-shadow: 4 2px 4px -1px rgba(0,0,0,0.25);
+}
+
+header .btn-primary.custom-btn:active {
+  background-color: rgba(98, 201, 180, 0.8) !important;
+  border: none !important;
+}
+
+#scroll_arrow {
+  position: relative;
+  animation: MoveUpDown 2s infinite;
+}
+
+@keyframes MoveUpDown {
+  0% {
+    top: 0px;
+    color: rgba(255, 255, 255, 0.8);
   }
+
+  50% {
+    top: -5px;
+    color: white;
+  }
+
+  100% {
+    top: 0px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+header .btn-primary.custom-btn:hover {
+  padding-bottom: 30px;
+}
+
+/* Horizontal line */
+.collapsible-link::before {
+  content: '';
+  width: 14px;
+  height: 2px;
+  background: #333;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 1rem;
+  display: block;
+  transition: all 0.3s;
+}
+
+/* Vertical line */
+.collapsible-link::after {
+  content: '';
+  width: 2px;
+  height: 14px;
+  background: #333;
+  position: absolute;
+  top: calc(50% - 7px);
+  right: calc(1rem + 6px);
+  display: block;
+  transition: all 0.3s;
+}
+
+.collapsible-link[aria-expanded='true']::after {
+  transform: rotate(90deg) translateX(-1px);
+}
+
+.collapsible-link[aria-expanded='true']::before {
+  transform: rotate(180deg);
+}
+
+#my_projects .card-body span {
+  font-size: small;
+  border: #333 1px solid;
+  border-radius: 2px;
+  background-color:aliceblue;
+  padding: 3px;
+  margin: 1px;
+}
+
+blockquote {
+  width: 80%;
+  font-style: italic;
+  border-left: 8px solid var(--banner_green);
+  /* border-right: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray; */
+  background-color:whitesmoke;
+}
+
+.quotation_mark {
+  width: 3%;
+  display: block;
+}
 
 .pm {
   color:var(--banner_pink); 
@@ -37,173 +156,103 @@
   line-height: 60px;
 }
 
-.btn-primary.custom-btn {
-    font-family: 'Nunito';
-    font-weight: 800;
-    border-width: 2px;
-    background-color: var(--banner_pink); 
-    border-color: var(--banner_pink); 
-   }
-  
-  .btn-primary.custom-btn:hover {
-    opacity: 0.8;
-   }
-  
-  .smsetting {
-    height: 35px;
-    padding-top: 8px;
-    margin-top: 2px;
-    width: 35px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-   }
-  
-  .smsetting:hover {
-    opacity: 0.8;
-   }
-  
-  .smsetting:link {
-    text-decoration: none;
-   }
-  
-  .fa-file-alt {
-    background-color: var(--banner_green);
-    color: white;
-   }
-  
-  .fa-github {
-    background-color: #333;
-    color: white;
-   }
-  
-  .fa-linkedin-in {
-    background-color: #2867B2;
-    color: white;
-    }
-  
-  .fa-link {
-    background-color: var(--banner_pink);
-    color: white;
-  }
-  
-  .intro_text {
-    font-family: 'Allerta Stencil';
-    font-size: calc(50% + 1vw + 1vh);
-    color: white;
-    text-align: left;
-  }
-  
-  .work_img_wrapper {  
-    overflow: hidden; 
-  }
-  
-  .work_girl_img {
-    transition: 0.3s;
-    width: 80%;
-  }
-  
-  .work_img_wrapper:hover .work_girl_img{
-    transform: scale(1.1);
-    opacity: 0.3;
-  }
-  
-  .work_img_wrapper:hover .img-description {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .img-description {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .2s, visibility .2s;
-  }
-  
-  .work_title {
-    font-size: 25px;
-    color: #666666
-  }
-  
-  .work_title:hover {
-    text-decoration: none;
-    color: #333
-  }
-
-  .youtube_video {
-    border-bottom: 3px solid var(--banner_green);
-    border-right: 3px solid var(--banner_green);
-    border-top: 3px solid var(--banner_pink);
-    border-left: 3px solid var(--banner_pink);
-  }
-  
-  .feature_name_green {
-    font-family: 'Barrio', cursive;
-    font-size: 32px;
-    color: var(--banner_green);
-  }
-  
-  .feature_name_pink {
-    font-family: 'Barrio', cursive;
-    font-size: 32px;
-    color: var(--banner_pink);
-  }
-  
-  .filter-button {
-      font-size: 18px;
-      border: 1px solid #db584e;
-      border-radius: 5px;
-      text-align: center;
-      color: #db584e;
-      margin-bottom: 30px;
-  
-  }
-  .filter-button:hover {
-      font-size: 18px;
-      border: 1px solid #db584e;
-      border-radius: 5px;
-      text-align: center;
-      color: #ffffff;
-      background-color: #db584e;
-  
-  }
-  .btn-default:active .filter-button:active {
-      background-color: #db584e;
-      color: white;
-  }
-  
-  .gallery_product img {
-    width: 100%;
-    margin: 10px 0;
-  }
-  
-  .more_about_me {
-    height: 60vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-.scroll_symbol {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-size: 50px;
-  padding-bottom: 15px;
-  padding-right: 30px;
-  text-shadow: 0 0 3px rgb(212, 212, 212);
+section .btn-primary.custom-btn {
+  font-family: 'Nunito';
+  font-weight: 800;
+  border-width: 2px;
+  background-color: var(--banner_pink); 
+  border-color: var(--banner_pink); 
 }
 
-.scroll_symbol a {
+section .btn-primary.custom-btn:hover {
+  opacity: 0.8;
+}
+
+.smsetting {
+  height: 35px;
+  padding-top: 8px;
+  margin-top: 2px;
+  width: 35px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 20px;
+  text-align: center;
   text-decoration: none;
+}
+
+.smsetting:hover {
+  opacity: 0.8;
+}
+
+.smsetting:link {
+  text-decoration: none;
+}
+
+.fa-file-alt {
+  background-color: var(--banner_green);
+  color: white;
+}
+
+.fa-github {
+  background-color: #333;
+  color: white;
+}
+
+.fa-linkedin-in {
+  background-color: #2867B2;
+  color: white;
+}
+
+.feature_name_green {
+  font-family: 'Barrio', cursive;
+  font-size: 32px;
   color: var(--banner_green);
 }
 
-.scroll_symbol a:hover{
-  opacity: 0.8;
+.feature_name_pink {
+font-family: 'Barrio', cursive;
+font-size: 32px;
+color: var(--banner_pink);
+}
+
+.youtube_video {
+  border-bottom: 3px solid var(--banner_green);
+  border-right: 3px solid var(--banner_green);
+  border-top: 3px solid var(--banner_pink);
+  border-left: 3px solid var(--banner_pink);
+}
+
+.filter-button {
+  font-size: 18px;
+  border: 1px solid #db584e;
+  border-radius: 5px;
+  text-align: center;
+  color: #db584e;
+  margin-bottom: 30px;
+
+}
+.filter-button:hover {
+  font-size: 18px;
+  border: 1px solid #db584e;
+  border-radius: 5px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #db584e;
+
+}
+.btn-default:active .filter-button:active {
+  background-color: #db584e;
+  color: white;
+}
+
+.gallery_product img {
+width: 100%;
+margin: 10px 0;
+}
+
+.more_about_me {
+height: 60vh;
+overflow-y: auto;
+overflow-x: hidden;
 }

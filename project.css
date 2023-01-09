@@ -1,0 +1,103 @@
+@import url("main.css");
+
+.project_title {
+    color:var(--banner_green); 
+    font-family: 'Big Shoulders Stencil Text';
+    letter-spacing: 1px;
+    font-size: 50px;
+    text-shadow: 1px 0 rgb(175, 175, 175);
+}
+
+.project_title_line {
+    background-color: var(--banner_pink);
+    box-shadow: 1px 0 rgb(175, 175, 175);
+    height: 3px;
+    width: 20%;
+}
+
+.project_highlight {
+    color:var(--banner_green);
+    font-size: 25px;
+    text-shadow: 1px 0 rgb(175, 175, 175);
+}
+
+.project_title_slash {
+    color:var(--banner_pink);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.sub_title {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.basic_info_body {
+    line-height: 35px;
+    margin-bottom: 0;
+}
+
+.nav-pills-custom {
+    position: sticky;
+    top: 70px;
+}
+
+.nav-pills-custom .nav-link:hover {
+    color: var(--banner_green);
+    opacity: 0.5;
+}
+
+.nav-pills-custom .nav-link.active:hover {
+    opacity: 1;
+}
+
+.nav-pills-custom .nav-link {
+    color: #aaa;
+    background: #fff;
+    position: relative;
+}
+
+.nav-pills-custom .nav-link.active {
+    color: var(--banner_green);
+    background: #fff;
+}
+
+/* Add indicator arrow for the active tab */
+@media (min-width: 576px) {
+    .nav-pills-custom .nav-link::before {
+        content: '';
+        display: block;
+        border-top: 8px solid transparent;
+        border-left: 10px solid #fff;
+        border-bottom: 8px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
+
+.nav-pills-custom .nav-link.active::before {
+    opacity: 1;
+}
+
+.reflection_text {
+    text-indent: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    border-left: 6px solid var(--banner_pink);
+    padding-left: 25px;
+}
+
+.tab-content ul ol {
+    padding: 5px 0;
+}
+
+.tab-content ul li {
+    padding: 5px 0;
+}
+
+.tab-content h4 {
+    text-align: center;
+}

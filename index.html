@@ -11,7 +11,7 @@
 
     gtag('config', 'G-3H9HJCJNWB', {'page_title' : 'Home'});
   </script>
-  <title>Jiashu Zhang Portfolio</title>
+  <title>Jiashu Zhang</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
   <script src="https://kit.fontawesome.com/188a1ecbd0.js" crossorigin="anonymous" async></script>
   <script src="main.js" async></script>
   <link rel="stylesheet" type="text/css" href="home.css">
-  <link rel="shortcut icon" type="image/x-icon" href="assets/icon.ico"/>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/logo.ico"/>
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href='https://fonts.googleapis.com/css?family=Big Shoulders Stencil Text' rel='stylesheet'>
@@ -39,11 +39,9 @@
     var parallax = new Parallax(addons, {
       relativeInput: true,
     });
-
   }
 
   $(document).ready(function(){
-
     //tootip for social media icons
     $('[data-toggle="tooltip"]').tooltip();
 
@@ -51,19 +49,18 @@
     $(".filter-button").click(function(){
     var value = $(this).attr('data-filter');
     
-    if(value == "all") {
-        $('.filter').show('1000');}
+    if (value == "all") {
+      $('.filter').show('1000');}
     else {
-        $(".filter").not('.'+value).hide('3000');
-        $('.filter').filter('.'+value).show('3000');}
+      $(".filter").not('.'+value).hide('3000');
+      $('.filter').filter('.'+value).show('3000');}
     });
 
     if ($(".filter-button").removeClass("active")) {
-    $(this).removeClass("active");
+      $(this).removeClass("active");
     }
-    $(this).addClass("active");
+      $(this).addClass("active");
   });
-
 
 </script>
 
@@ -72,7 +69,7 @@
   <!--Loading Page-->
   <div class="se-pre-con">
     <div class="loader_image">
-      <img src="assets/icon.png">
+      <img src="assets/logo.png">
       <p>Loading ...</p>
     </div>
   </div>
@@ -82,9 +79,11 @@
     <div class="container">
         <!-- Brand/logo -->
         <a class="navbar-brand" href="index.html">
-        <img src="assets/icon.png" alt="logo" style="width:50px;">
+          <img src="assets/logo.png" alt="logo" style="width:35px; padding-bottom: 3px;">
         </a>
-        <a class="navbar-brand jiashuzhang" href="index.html" style="font-size: 24px; color: rgb(253, 95, 94);">JZ</a>
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/logo_name.png" alt="logo_name" style="height:30px; padding-bottom: 5px;">
+        </a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -95,16 +94,13 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item ml-2">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="index.html#my_projects">Projects</a>
             </li>
             <li class="nav-item ml-2">
-            <a class="nav-link" href="featured.html"><i class="fas fa-star"></i>&nbsp;Featured Projects&nbsp;<i class="fas fa-star"></i></a>
+              <a class="nav-link" href="index.html#about_me">About Me</a>
             </li>
             <li class="nav-item ml-2">
-            <a class="nav-link" href="analytics.html">Business Analytics</a>
-            </li>
-            <li class="nav-item ml-2">
-            <a class="nav-link" href="techmarket.html">Tech & Marketing</a>
+              <a type="button" href="assets/Zhang-Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary custom-btn mr-3">Resume</a>
             </li>
             <span class="nav-indicator"></span>
         </ul>
@@ -130,34 +126,351 @@
       <li data-depth="0.02">
         <img class = "addon" src="assets/addon5.png">
       </li>
-      <div data-depth="-0.2" style="margin-left: 45vw; margin-top: 10vh;">
+      <div class="flex-container" data-depth="-0.2" style="margin-left: 45vw; margin-top: 8vh;">
         <h2 class="intro_text">Hi, this is</h2>
         <h1 class="jiashuzhang">JIASHU</h1>
         <h1 class="jiashuzhang">ZHANG</h1>
-        <h2 class="intro_text">Create the Best for Human Use</h2>
+        <h2 class="intro_text">Let's Agile, not Fragile</h2>
       </div>
     </ul>
 
-    <div class="scroll_symbol"><a href="#self-intro"><i class="fas fa-arrow-circle-down"></i></a></div>
+    <a type="button" href="#my_projects" class="btn btn-primary custom-btn intro_text"><span id="scroll_arrow">view experiences & projects &#8595;</span></a>
 
   </header>
 
     <!-- no parallax effect for tablet or mobile -->
     <header class="masthead_mobile d-lg-none">
-        <div style="margin-left: 45vw; margin-top: 10vh;">
+        <div style="margin-left: 45vw; margin-top: 8vh;">
           <h2 class="intro_text">Hi, this is</h2>
           <h1 class="jiashuzhang">JIASHU</h1>
           <h1 class="jiashuzhang">ZHANG</h1>
-          <h2 class="intro_text">Create the Best for Human Use</h2>
+          <h2 class="intro_text">Let's Agile, not Fragile</h2>
         </div>
-        <div class="scroll_symbol"><a href="#self-intro"><i class="fas fa-arrow-circle-down"></i></a></div>
     </header>
 
     <!-- back to top button -->
     <button onclick="topFunction()" id="back_to_top" title="Go to top">Top</button>
 
 <!-- Page Content -->
-<section class="py-5" id="self-intro">
+
+<section class="py-5" id="my_projects">
+  <div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-md-12 text-center mb-5"><h1 class="my_work">Experiences & Projects</h1></div>
+    </div>
+
+    <!-- Accordion -->
+    <div id="accordionExample" class="accordion shadow">
+
+      <!-- Accordion item 8 -->
+      <div class="card">
+        <div id="headingEight" class="card-header bg-light shadow-sm border-0">
+          <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" class="d-block position-relative text-dark collapsible-link py-2">🚀&nbsp;&nbsp;Product Management Intern</a></h6>
+        </div>
+        <div id="collapseEight" aria-labelledby="headingEight" data-parent="#accordionExample" class="collapse">
+          <div class="card-body p-5">
+            <div class="row px-5">
+              <div class="col-md-12 px-5">
+                <p><b>8-Month Product Management Internship at <a href="https://www.linkedin.com/company/airhq/" target="_blank" rel="noopener noreferrer">Air</a></b><small> (Creative Ops System for Marketers; tech start-up raised +$28M)</small></p>
+                <ul>
+                  <li>Drove feature development along with designers and engineers</li>
+                  <li>Revamped product feedback process to prioritize, and analyze feedback into product requirements</li>
+                  <li>Documentated product specs and functionalities</li>
+                </ul>
+                <p>Skill Highlights:<br>
+                  <span>Product Management</span>
+                  <span>Feature Development</span>
+                  <span>Product Specs</span><br>
+                  <span>Backlog Prioritization</span>
+                  <span>Agile</span>
+                  <span>Sprint planning</span>
+                  <span>Roadmapping</span>
+                  <span>Documentation</span>
+                  <span>QA</span>
+                  <span>Jira</span>
+                  <span>Notion</span>
+                </p>
+              </div>
+            </div>
+            <div class="row pr-5 mt-5 justify-content-center">
+              <blockquote class="p-5">
+                <img class="quotation_mark mb-3" src="assets/quotation_mark.png">
+                Having Julie on my team as a product management intern was a dream! She has an innate sense of what makes a strong digital product, and her background in computer science and both physical and graphic design is the icing on the cake. Half the time when I asked Julie to complete a task, she was already thinking about it or 10 steps ahead of me. During her internship at Air, she created a knowledge database about our product completely from scratch that's still used by our entire team today, and she also transitioned us from a limited, manual feedback tracking process onto a new system with direct integrations to the tools we use to communicate with customers and internally. Any product team would be super lucky to have Julie!!
+                <p class="mt-3 mb-0" style="text-align: right;">——&nbsp; <a href="https://www.linkedin.com/in/caroline-congdon-866b56ab/" target="_blank" rel="noopener noreferrer">Caroline Congdon</a>, Product Manager at Air</p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion item 1 -->
+      <div class="card">
+        <div id="headingOne" class="card-header bg-light shadow-sm border-0">
+          <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="d-block position-relative text-dark collapsible-link py-2"> 🎮&nbsp;&nbsp;Video Game Producer</a></h6>
+        </div>
+        <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse">
+          <div class="card-body p-5">
+            <div class="row px-5">
+              <div class="col-md-5 embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hdI0tjFsgW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="col-md-7 px-5">
+                <p>25+ Student-Run Video Game Development Project</p>
+                <ul>
+                  <li>Front-line game producer - project manager</li>
+                  <li>3 Production sprints + 1 QA sprint</li>
+                </ul>
+                <p><a href="https://juliezhangdevblog.weebly.com/" target="_blank" rel="noopener noreferrer">Personal Development Blog</a><br>
+                    <a href="https://wolverinesoft-studio.itch.io/subtension" target="_blank" rel="noopener noreferrer">Game Launching Page</a></p>
+                <p>Skill Highlights:<br>
+                  <span>Cross-functional leadership</span>
+                  <span>Project management</span>
+                  <span>Agile</span>
+                  <span>Sprint planning</span>
+                  <span>Roadmapping</span>
+                  <span>Jira</span>
+                  <span>Confluence</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion item 2 -->
+      <div class="card">
+        <div id="headingTwo" class="card-header bg-light shadow-sm border-0">
+          <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="d-block position-relative collapsed text-dark collapsible-link py-2">🎨&nbsp;&nbsp;Platform UI/UX Designer</a></h6>
+        </div>
+        <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+          <div class="card-body p-5">
+            <div class="row px-5">
+              <div class="col-md-5">
+                <img src="assets/Babson_China.png" width="100%">
+              </div>
+              <div class="col-md-7 px-5">
+                <p>Babson China Club - Nonprofit Alumni Association</p>
+                <ul>
+                  <li>Website + Platform design</li>
+                  <li>UI + UX focus</li>
+                  <li>Miminum viable product identification</li>
+                  <li>User interviews + need assessment</li>
+                  <li>Information flow design</li>
+                </ul>
+                <p><a href="https://drive.google.com/file/d/1Y5h9ImCeBS24pYv76Tj9pIWbhPOXLy56/view?usp=sharing" target="_blank" rel="noopener noreferrer">Project Proposal (Mandarin)</a><br>
+                    <a href="https://drive.google.com/file/d/1AjzB1UxKeD4kTXUbRCdcN44LUZST4YcB/view?usp=sharing" target="_blank" rel="noopener noreferrer">Information Flow Chart (Mandarin)</a><br>
+                    <a href="https://www.figma.com/proto/BU4KjoheZc8QHq8uplCToP/Babson-China-Club?node-id=1453%3A904&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1453%3A904" target="_blank" rel="noopener noreferrer">Figma High-Fidelity Prototype</a>
+                </p>
+                <p>Skill Highlights:<br>
+                  <span>Prototyping</span>
+                  <span>User Stories</span>
+                  <span>Need Assessment</span>
+                  <span>UX</span>
+                  <span>UI</span><br>
+                  <span>Information Flow Design</span>
+                  <span>Website Design</span>
+                  <span>Platform Design</span>
+                  <span>Figma</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion item 3 -->
+      <div class="card">
+        <div id="headingThree" class="card-header bg-light shadow-sm border-0">
+          <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="d-block position-relative collapsed text-dark collapsible-link py-2">🏕️&nbsp;&nbsp;Product Design For Amputee</a></h6>
+        </div>
+        <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+          <div class="card-body p-5">
+            <div class="row px-5">
+              <div class="col-md-5 embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/u9v3gzVkyDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="col-md-7 px-5">
+                <p>3-Month Product Design Challenge</p>
+                <ul>
+                  <li>Product from 0 - 1</li>
+                  <li>Market & user research</li>
+                  <li>Pain point analysis</li>
+                  <li>Heavy usability tests, continuous improvements</li>
+                  <li>Double diamond design thinking process</li>
+                  <li>Low, mid, to high-fidelity prototype</li>
+                  <li>3 round design reviews/iterations</li>
+                </ul>
+                <p><a href="https://miro.com/app/board/uXjVPYk5Gr0=/?share_link_id=354948922924" target="_blank" rel="noopener noreferrer">Design Process Miro Board</a><br>
+                    <a href="https://drive.google.com/file/d/1b1a9V9Ld2B7szpo81a-U1lvZFm5EJA2Q/view?usp=sharing" target="_blank" rel="noopener noreferrer">Final Business Report</a><br>
+                    <a href="https://lizli46.wixsite.com/rolipoli" target="_blank" rel="noopener noreferrer">Product Website</a>
+                </p>
+                <p>Skill Highlights:<br>
+                  <span>User Research</span>
+                  <span>Personas</span>
+                  <span>Competitor Analysis</span>
+                  <span>Market Analysis</span><br>
+                  <span>Cost Analysis</span>
+                  <span>Concept Testing</span>
+                  <span>User Testing</span>
+                  <span>Accessibility Design</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion item 4 -->
+      <div class="card">
+        <div id="headingFour" class="card-header bg-light shadow-sm border-0">
+          <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="d-block position-relative collapsed text-dark collapsible-link py-2">🌟&nbsp;&nbsp;Holaspace Event Platform</a></h6>
+        </div>
+        <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" class="collapse">
+          <div class="card-body p-5">
+            <div class="row px-5">
+              <div class="col-md-5">
+                <img src="assets/Holaspace.png" width="100%">
+              </div>
+              <div class="col-md-7 px-5">
+                <p>4-Week Tech Innovation Challenge</p>
+                <ul>
+                  <li>Product ideation + Value propositions</li>
+                  <li>Market research + Business Model</li>
+                </ul>
+                <p><a href="https://drive.google.com/file/d/1gbGI5kzt6JKuBUcvtePK7POzaRDw_Iqy/view?usp=sharing" target="_blank" rel="noopener noreferrer">Business Pitch Deck</a>
+                </p>
+                <p>Skill Highlights:<br>
+                  <span>Ideation</span>
+                  <span>Innovation</span>
+                  <span>Market Analysis</span><br>
+                  <span>Business Model</span>
+                  <span>User Research</span>
+                  <span>Web APP</span>
+                  <span>Mobile APP</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion item 5 -->
+      <div class="card">
+        <div id="headingFive" class="card-header bg-light shadow-sm border-0">
+          <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" class="d-block position-relative collapsed text-dark collapsible-link py-2">🖥️&nbsp;&nbsp;Full-Stack Web App Development</a></h6>
+        </div>
+        <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample" class="collapse">
+          <div class="card-body p-5">
+            <div class="row px-5">
+              <div class="col-md-5">
+                <img src="assets/starBook.png" width="100%">
+              </div>
+              <div class="col-md-7 px-5">
+                <p>Self-Taught Python Django Project</p>
+                <ul>
+                  <li>Client: ICRA nonprofit organization</li>
+                  <li>User interface, backend, and database design</li>
+                  <li>Google Book API integration</li>
+                </ul>
+                <p><a href="starBook.html" target="_blank" rel="noopener noreferrer">Development Process</a>
+                </p>
+                <p>Skill Highlights:<br>
+                  <span>Bootstrap</span>
+                  <span>Google API</span>
+                  <span>JavaScript</span>
+                  <span>CSS</span>
+                  <span>HTML</span>
+                  <span>Python</span>
+                  <span>Django</span>
+                  <span>SQLite</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion item 6 -->
+      <div class="card">
+        <div id="headingSix" class="card-header bg-light shadow-sm border-0">
+          <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" class="d-block position-relative collapsed text-dark collapsible-link py-2">👓&nbsp;&nbsp;VR & AR Language Learning App</a></h6>
+        </div>
+        <div id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample" class="collapse">
+          <div class="card-body p-5">
+            <div class="row px-5">
+              <div class="col-md-5 embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://drive.google.com/file/d/1Ozft86MaDl7ha3IjsDSUY2kKySWg3S9-/preview" allow="autoplay"></iframe>
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-5 px-5">
+                <p class="pt-5"><a href="https://drive.google.com/file/d/1E-7Qk8lsvkNZbr9KhI3HpNtiZJ8SAksX/view?usp=sharing" target="_blank" rel="noopener noreferrer">VR Design Process</a><br>
+                    <a href="https://drive.google.com/file/d/1tTb5UthU4CU_of393DPw6GguUAKoSZhi/view?usp=sharing" target="_blank" rel="noopener noreferrer">AR Design Process</a><br>
+                </p>
+                <p>Skill Highlights:<br>
+                  <span>Virtual Reality</span>
+                  <span>Augmented Reality</span>
+                </p>
+              </div>
+            </div>
+            <div class="row px-5 mt-4">
+              <div class="col-md-5 embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://drive.google.com/file/d/1IkMB7lwBxrhZNh_8wBF6sDLLyZ4xc2qM/preview" allow="autoplay"></iframe>
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-5 embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://drive.google.com/file/d/1c2Q33ueHvy2hYYhdxhG60xg8NBL3PJfn/preview" allow="autoplay"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion item 7 -->
+      <div class="card">
+        <div id="headingSeven" class="card-header bg-light shadow-sm border-0">
+          <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" class="d-block position-relative collapsed text-dark collapsible-link py-2">🥘&nbsp;&nbsp;EZFood Mobile App</a></h6>
+        </div>
+        <div id="collapseSeven" aria-labelledby="headingSeven" data-parent="#accordionExample" class="collapse">
+          <div class="card-body p-5">
+            <div class="row px-5">
+              <div class="col-md-5">
+                <img src="assets/EZFood.png" style="border: 1px solid lightgray;" width="100%">
+              </div>
+              <div class="col-md-7 px-5">
+                <p>Self-Taught Python Django Project</p>
+                <ul>
+                  <li>What: 6 user interviews + 5 competitor research</li>
+                  <li>Who: 4 types of personas</li>
+                  <li>How: user flowchart + storymapping</li>
+                  <li>Why: value proposition analysis</li>
+                </ul>
+                <p><a href="https://drive.google.com/file/d/1vQxPigeARvzgzrm4XwZ6d2A7AzQsHbMr/view?usp=sharing" target="_blank" rel="noopener noreferrer">Pitch Deck</a><br>
+                    <a href="https://drive.google.com/file/d/1Z6hAyo739CT1PDAAv1NgaxuznC_EUGe6/view?usp=sharing" target="_blank" rel="noopener noreferrer">Final Write-Up</a><br>
+                    <a href="https://www.figma.com/proto/RLrOZdbhGHtbAmzO0NMF1g/SI-582---Mid-Prototype?scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A3&node-id=2%3A3" target="_blank" rel="noopener noreferrer">Figma Mid-Fidelity Prototype</a>
+                </p>
+                <p>Skill Highlights:<br>
+                  <span>User Research</span>
+                  <span>User Personas</span>
+                  <span>User Stories</span>
+                  <span>Value Proposition</span>
+                  <span>Competitor Matrix</span>
+                  <span>QOC</span>
+                  <span>Design Thinking</span>
+                  <span>User Flowchart</span>
+                  <span>Prototyping</span>
+                  <span>Figma</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 back_area" id="about_me">
   <div class="container">
     <div class="row d-flex align-items-center justify-content-center">
       <!-- self photo -->
@@ -169,31 +482,31 @@
         <div class="row d-flex align-items-center justify-content-center">
           <div class="col-md-12">
             <h5 style="color: #333;"><b>Hi There, I'm Jiashu Zhang</b></h5>
-            <h4 class="pm"><b>A Software Product Management Aspirant</b></h4>
+            <h4 class="pm"><b>An Agile Product Manager</b></h4>
             <p>I love to explore advanced technologies while engaging with my clients and target end-users. I am proud of myself for being both analytical and creative. My passion is to build software products that serve people better, including you and me.</p>
             <p><span style="color: #333;"><b>Email: </b></span><a href="mailto:juliezhang0102@gmail.com" style="text-decoration: none;">juliezhang0102@gmail.com</a></p>
           </div>
         </div>
         <div class="row d-flex align-items-center justify-content-center">
           <div class="col-md-12">
-            <a type="button" href="featured.html" class="btn btn-primary custom-btn mr-3">My Featured Projects</a>
+            <a type="button" href="index.html#my_projects" class="btn btn-primary custom-btn mr-3">My Projects</a>
             <!-- Laptop up view -->
             <div class="d-none d-lg-inline">
               <a class="smsetting far fa-file-alt mr-2" data-toggle="tooltip" data-placement="bottom" title="Resume"
-                  href="assets/Zhang-Resume.pdf" download target="_blank"></a>
+                  href="assets/Zhang-Resume.pdf" download target="_blank" rel="noopener noreferrer"></a>
               <a class="smsetting fab fa-linkedin-in mr-2" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"
-                  href="https://www.linkedin.com/in/juliezhang0102" target="_blank"></a>
+                  href="https://www.linkedin.com/in/juliezhang0102" target="_blank" rel="noopener noreferrer"></a>
               <a class="smsetting fab fa-github" data-toggle="tooltip" data-placement="bottom" title="GitHub"
-                  href="https://github.com/JulieZhang0102" target="_blank"></a>
+                  href="https://github.com/JulieZhang0102" target="_blank" rel="noopener noreferrer"></a>
             </div>
             <!-- Mobile view -->
             <div class="mt-3 d-block d-lg-none">
               <a class="smsetting far fa-file-alt mr-2" data-toggle="tooltip" data-placement="bottom" title="Resume"
-              href="assets/Zhang-Resume.pdf" download target="_blank"></a>
+              href="assets/Zhang-Resume.pdf" download target="_blank" rel="noopener noreferrer"></a>
               <a class="smsetting fab fa-linkedin-in mr-2" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"
-              href="https://www.linkedin.com/in/juliezhang0102" target="_blank"></a>
+              href="https://www.linkedin.com/in/juliezhang0102" target="_blank" rel="noopener noreferrer"></a>
               <a class="smsetting fab fa-github" data-toggle="tooltip" data-placement="bottom" title="GitHub"
-              href="https://github.com/JulieZhang0102" target="_blank"></a>
+              href="https://github.com/JulieZhang0102" target="_blank" rel="noopener noreferrer"></a>
             </div>
           </div>
         </div>
@@ -201,14 +514,18 @@
     </div>
   </div>
 </section>
-<section class="py-5 back_area">
+
+
+
+
+<section class="py-5">
   <div class="container">
     <div class="row d-flex align-items-center justify-content-center">
       <div class="col-md-12 text-center"><h1 class="my_feature mb-5">A Glance at Me</h1></div>
     </div>
     <div class="row d-flex align-items-center justify-content-center">
       <div class="col-md-6 text-center">
-        <h3 class="mt-2"><span class="feature_name_pink">Innovative, </span><span class="feature_name_green">Analytical</span></h3>
+        <h3 class="mt-2"><span class="feature_name_pink">Multidisciplinary, </span><span class="feature_name_green">Analytical</span></h3>
         <h3 class="mt-2"><span class="feature_name_green">Human-Centered, </span><span class="feature_name_pink">Tech-Savvy</span></h3>
         <!-- word cloud -->
         <img class="mt-2" width="80%" src="assets/word_cloud.png">
@@ -222,40 +539,14 @@
     </div>
   </div>
 </section>
-<section class="py-5">
-  <div class="container">
-    <div class="row d-flex align-items-center justify-content-center">
-      <div class="col-md-12 text-center"><h1 class="my_work">My Work</h1></div>
-    </div>
-    <div class="row mt-3 d-flex align-items-center justify-content-center">
-      <div class="col-md-4 text-center">
-        <div class="work_img_wrapper">
-          <img class="work_girl_img" src="assets/work2.png" />
-          <a class="img-description smsetting fas fa-link" href="analytics.html"></a>
-        </div>
-        <div class="mt-4"><a class="work_title" href="analytics.html">Business Analytics</a></div>
-      </div>
-      <div class="col-md-4 text-center">
-        <div class="work_img_wrapper">
-          <img class="work_girl_img" src="assets/work1.png" />
-          <a class="img-description smsetting fas fa-link" href="featured.html"></a>
-        </div>
-        <div class="mt-4"><a class="work_title" href="featured.html">Featured Projects</a></div>
-      </div>
-      <div class="col-md-4 text-center">
-        <div class="work_img_wrapper">
-          <img class="work_girl_img" src="assets/work3.png" />
-          <a class="img-description smsetting fas fa-link" href="techmarket.html"></a>
-        </div>
-        <div class="mt-4"><a class="work_title" href="techmarket.html">Tech & Marketing</a></div>
-      </div>
-    </div>
-  </div>
-</section>
+
+
+
+
 <section class="py-5 back_area">
   <div class="container">
     <div class="row mb-4 d-flex align-items-center justify-content-center">
-      <div class="col-md-12 text-center"><h1 class="my_feature">More About Me</h1></div>
+      <div class="col-md-12 text-center"><h1 class="my_work">More About Me</h1></div>
     </div>
     <div class="row d-flex align-items-center justify-content-center">
       <div class="col-md-3">
@@ -419,7 +710,7 @@
 
 <footer class="py-3 bg-dark text-white-50">
   <div class="container text-center">
-    <small>Copyright &copy; 2020 Jiashu Zhang All Right Reserved</small>
+    <small>Copyright &copy; 2022 Jiashu Zhang All Right Reserved</small>
   </div>
 </footer>
 

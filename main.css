@@ -95,28 +95,32 @@ section {
 
 .navbar .navbar-nav .nav-link {
   color: var(--banner_pink);
-  opacity: 70%;
   padding-top: 14px;
   padding-bottom: 13px;
 }
 
-.navbar .navbar-nav .nav-item a:hover {
-  background-image: url('assets/menu-cloud1.png'), url('assets/menu-cloud2.png');
-  background-position: left top, right bottom;
-  background-size: 30px, 30px;
-  background-repeat: no-repeat, no-repeat;
-  color: var(--banner_pink);
-  opacity: 100%;
+.navbar .navbar-nav .nav-item a:not([type="button"]):hover {
+  opacity: 80%;
 }
 
-.navbar .navbar-nav .nav-item .active {
-  font-weight: bold;
-  color: var(--banner_pink);
-  opacity: 100%;
+nav .btn-primary.custom-btn {
+  font-family: 'Nunito';
+  font-weight: 800;
+  border-width: 2px;
+  background-color: var(--banner_pink); 
+  border-color: var(--banner_pink);
+  margin-top: 7px;
+  margin-left: 8px;
 }
 
-.navbar .navbar-nav .fa-star {
-  font-size: 15px;
+@media only screen and (max-width: 576px) {
+  nav .btn-primary.custom-btn {
+    margin-left: 0px;
+  }
+}
+
+nav .btn-primary.custom-btn:hover {
+  opacity: 0.8;
 }
 
 .fa-bars {
